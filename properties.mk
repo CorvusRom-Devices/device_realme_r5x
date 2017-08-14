@@ -129,6 +129,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
 	dalvik.vm.dex2oat64.enabled=true
 
+# Dex
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.sys.fw.dex2oat_thread_count=8
+
 # Display
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.early_app_phase_offset_ns=1500000 \
