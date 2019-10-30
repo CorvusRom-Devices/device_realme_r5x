@@ -5,7 +5,6 @@ service vendor.fps_hal.r5x /vendor/bin/hw/android.hardware.biometrics.fingerprin
     class late_start
     user system
     group system input uhid
-    writepid /dev/cpuset/system-background/tasks
 
 service ets_hal /vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service-rbs
 	# "class hal" causes a race condition on some devices due to files created
