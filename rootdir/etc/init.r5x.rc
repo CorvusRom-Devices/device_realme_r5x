@@ -54,6 +54,10 @@ on property:vendor.post_boot.parsed=1
     # Enable PowerHAL hint processing
     setprop vendor.powerhal.init 1
 
+    # Report max frequency to unity tasks
+    write /proc/sys/kernel/sched_lib_name "UnityMain,libunity.so"
+    write /proc/sys/kernel/sched_lib_mask_force 255
+
     # Override readahead to 128KiB
     write /sys/block/mmcblk0/queue/read_ahead_kb 128
     write /sys/block/mmcblk1/queue/read_ahead_kb 128
