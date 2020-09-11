@@ -155,6 +155,13 @@ PRODUCT_PACKAGES += \
     BluetoothQti \
     vendor.qti.hardware.btconfigstore@1.0.vendor
 
+# Binder
+PRODUCT_PACKAGES += \
+    libhwbinder \
+    libhwbinder.vendor \
+    libhidltransport \
+    libhidltransport.vendor
+
 # Camera
 PRODUCT_PACKAGES += \
     Snap
