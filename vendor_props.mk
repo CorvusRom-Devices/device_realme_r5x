@@ -197,8 +197,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.radio.data_ltd_sys_ind=1 \
     persist.vendor.radio.data_con_rprt=1 \
     persist.vendor.radio.rat_on=combine \
-    persist.vendor.radio.sib16_support=1 \
-    vendor.rild.libpath=/vendor/lib64/libril-qc-qmi-1.so
+    persist.vendor.radio.sib16_support=1
 
 # Sensor
 PRODUCT_PROPERTY_OVERRIDES += \
