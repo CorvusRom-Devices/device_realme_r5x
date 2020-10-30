@@ -84,6 +84,7 @@ on init
     chmod 0660 /sys/fs/cgroup/memory/bg/tasks
 
 on post-fs
+    setprop oppo.camera.packname com.oppo.camera
     chmod 0755 /sys/kernel/debug/tracing
 
     mkdir /mnt/vendor/dsp 0770 root root
