@@ -126,6 +126,9 @@ on boot
 #Load WLAN driver
     insmod /vendor/lib/modules/qca_cld3_wlan.ko
 
+    # Disable serial console
+    setprop init.svc.console stopped
+
     setprop persist.vendor.hvdcp_opti.disallowed 1
     setprop persist.vendor.pps.disallowed 1
     setprop persist.vendor.cp.disallowed 1
