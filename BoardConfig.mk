@@ -194,7 +194,6 @@ TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
 # Power
 TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/double_tap_enable"
 TARGET_POWERHAL_MODE_EXT := $(DEVICE_PATH)/power/power-mode.cpp
-BOARD_POWER_CUSTOM_BOARD_LIB := libpower_6125
 TARGET_USES_INTERACTION_BOOST := true
 
 # Recovery
