@@ -136,7 +136,7 @@ PRODUCT_COPY_FILES += \
 
 # Configstore
 PRODUCT_PACKAGES += \
-    android.hardware.configstore@1.0-service
+    disable_configstore
 
 # Component overrides
 PRODUCT_COPY_FILES += \
