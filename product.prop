@@ -4,6 +4,9 @@ ro.surface_flinger.supports_background_blur=1
 # Dex
 ro.sys.fw.dex2oat_thread_count=8
 
+# GBoard
+ro.com.google.ime.kb_pad_port_b=1
+
 # LMKD
 ro.config.low_ram=false
 ro.lmk.log_stats=true
