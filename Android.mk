@@ -16,7 +16,7 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifneq ($(filter laurel_sprout ginkgo laurus,$(TARGET_DEVICE)),)
+ifneq ($(filter RMX1911 RMX2030,$(TARGET_DEVICE)),)
 
 include $(CLEAR_VARS)
 

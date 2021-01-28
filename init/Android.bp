@@ -14,7 +14,7 @@
 // limitations under the License.
 //
 
-xiaomi_trinket_init_library_static {
+realme_trinket_init_library_static {
     name: "libinit_trinket",
     recovery_available: true,
     srcs: [
@@ -24,6 +24,6 @@ xiaomi_trinket_init_library_static {
     include_dirs: [
         "system/core/base/include",
         "system/core/init",
-        "device/xiaomi/sm6125-common"
+        "device/realme/sm6125-common"
     ]
 }

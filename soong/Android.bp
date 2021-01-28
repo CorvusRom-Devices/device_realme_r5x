@@ -1,6 +1,6 @@
 bootstrap_go_package {
-    name: "soong-xiaomi-trinket-plugins",
-    pkgPath: "device/xiaomi/sm6125-common",
+    name: "soong-realme-trinket-plugins",
+    pkgPath: "device/realme/sm6125-common",
     deps: [
         "blueprint",
         "blueprint-pathtools",

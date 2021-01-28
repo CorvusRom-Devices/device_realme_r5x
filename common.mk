@@ -138,12 +138,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     external/ant-wireless/antradio-library/com.dsi.ant.antradio_library.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.dsi.ant.antradio_library.xml
 
-PRODUCT_PACKAGES += \
-    org.ifaa.android.manager
-
-PRODUCT_BOOT_JARS += \
-    org.ifaa.android.manager
-
 # Bluetooth
 PRODUCT_PACKAGES += \
     BluetoothQti \
@@ -304,7 +298,7 @@ PRODUCT_COPY_FILES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.xiaomi_trinket
+    android.hardware.light@2.0-service.realme_trinket
 
 # LiveDisplay native
 PRODUCT_PACKAGES += \
@@ -463,4 +457,4 @@ PRODUCT_BOOT_JARS += \
     WfdCommon
 
 # Inherit the proprietary files
-$(call inherit-product, vendor/xiaomi/sm6125-common/sm6125-common-vendor.mk)
+$(call inherit-product, vendor/realme/sm6125-common/sm6125-common-vendor.mk)

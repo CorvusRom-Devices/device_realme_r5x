@@ -9,7 +9,7 @@ import (
 func initFlags(ctx android.BaseContext) []string {
     var cflags []string
 
-    var config = ctx.AConfig().VendorConfig("XIAOMI_TRINKET_INIT")
+    var config = ctx.AConfig().VendorConfig("REALME_TRINKET_INIT")
     var lib = strings.TrimSpace(config.String("DEVICE_LIB"))
 
     if len(strings.TrimSpace(lib)) != 0 {
@@ -21,7 +21,7 @@ func initFlags(ctx android.BaseContext) []string {
 func initStaticLibs(ctx android.BaseContext) []string {
     var staticlibs []string
 
-    var config = ctx.AConfig().VendorConfig("XIAOMI_TRINKET_INIT")
+    var config = ctx.AConfig().VendorConfig("REALME_TRINKET_INIT")
     var lib = strings.TrimSpace(config.String("DEVICE_LIB"))
 
     if len(strings.TrimSpace(lib)) != 0 {

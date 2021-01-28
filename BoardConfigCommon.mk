@@ -22,9 +22,9 @@
 # definition file).
 #
 
-COMMON_PATH := device/xiaomi/sm6125-common
+COMMON_PATH := device/realme/sm6125-common
 
-BOARD_VENDOR := xiaomi
+BOARD_VENDOR := realme
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := trinket
@@ -64,7 +64,7 @@ BOARD_KERNEL_SEPARATED_DTBO := true
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
-TARGET_KERNEL_SOURCE := kernel/xiaomi/sm6125
+TARGET_KERNEL_SOURCE := kernel/realme/trinket
 TARGET_KERNEL_CLANG_COMPILE := true
 
 # QCOM hardware
@@ -211,4 +211,4 @@ WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # Inherit the proprietary files
-include vendor/xiaomi/sm6125-common/BoardConfigVendor.mk
+include vendor/realme/sm6125-common/BoardConfigVendor.mk

@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "android.hardware.light@2.0-service.xiaomi_trinket"
+#define LOG_TAG "android.hardware.light@2.0-service.realme_trinket"
 
 #include <android-base/logging.h>
 #include <hidl/HidlTransportSupport.h>

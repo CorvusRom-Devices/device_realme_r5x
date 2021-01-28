@@ -15,8 +15,8 @@
 
 cc_binary {
     defaults: ["hidl_defaults"],
-    name: "android.hardware.light@2.0-service.xiaomi_trinket",
-    init_rc: ["android.hardware.light@2.0-service.xiaomi_trinket.rc"],
+    name: "android.hardware.light@2.0-service.realme_trinket",
+    init_rc: ["android.hardware.light@2.0-service.realme_trinket.rc"],
     srcs: ["service.cpp", "Light.cpp"],
     shared_libs: [
         "libbase",

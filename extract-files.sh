@@ -18,7 +18,7 @@
 set -e
 
 DEVICE_COMMON=sm6125-common
-VENDOR=xiaomi
+VENDOR=realme
 
 # Load extract_utils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"
@@ -62,14 +62,6 @@ fi
 function blob_fixup() {
     case "${1}" in
 
-    vendor/bin/mlipayd@1.1)
-        patchelf --remove-needed vendor.xiaomi.hardware.mtdservice@1.0.so "${2}"
-        ;;
-
-    vendor/lib64/libmlipay.so | vendor/lib64/libmlipay@1.1.so)
-        patchelf --remove-needed vendor.xiaomi.hardware.mtdservice@1.0.so "${2}"
-        sed -i "s|/system/etc/firmware|/vendor/firmware\x0\x0\x0\x0|g" "${2}"
-        ;;
     esac
 }
 

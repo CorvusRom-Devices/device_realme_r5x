@@ -1,6 +1,6 @@
 [
   {
-    "repository": "android_kernel_xiaomi_sm6125",
-    "target_path": "kernel/xiaomi/sm6125"
+    "repository": "android_kernel_realme_trinket",
+    "target_path": "kernel/realme/trinket"
   }
 ]

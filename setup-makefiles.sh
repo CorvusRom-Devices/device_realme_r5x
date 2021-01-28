@@ -18,7 +18,7 @@
 set -e
 
 DEVICE_COMMON=sm6125-common
-VENDOR=xiaomi
+VENDOR=realme
 
 INITIAL_COPYRIGHT_YEAR=2019
 
@@ -39,7 +39,7 @@ fi
 setup_vendor "$DEVICE_COMMON" "$VENDOR" "$LINEAGE_ROOT" true
 
 # Copyright headers and guards
-write_headers "laurel_sprout ginkgo laurus"
+write_headers "RMX1911 RMX2030"
 
 write_makefiles "$MY_DIR"/proprietary-files.txt true
 
