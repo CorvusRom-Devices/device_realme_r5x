@@ -85,4 +85,21 @@
             <instance>AtCmdFwdService</instance>
         </interface>
     </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.qti.hardware.radio.internal.deviceinfo</name>
+        <version>1.0</version>
+        <interface>
+            <name>IDeviceInfo</name>
+            <instance>deviceinfo</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.oppo.hardware.radio.opporadio</name>
+        <version>1.0</version>
+        <interface>
+            <name>IOppoRadio</name>
+            <instance>oppo_slot1</instance>
+            <instance>oppo_slot2</instance>
+        </interface>
+    </hal>
 </compatibility-matrix>
