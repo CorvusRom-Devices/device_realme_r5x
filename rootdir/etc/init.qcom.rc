@@ -60,6 +60,8 @@ on early-init
     chmod 0666 /proc/touchpanel/game_switch_enable
     chown system system /proc/touchpanel/double_tap_enable
     chmod 0666 /proc/touchpanel/double_tap_enable
+    chown system system /proc/touchpanel/tp_fw_update
+    chmod 0666 /proc/touchpanel/tp_fw_update
 
     # Change ownership of sw_sync node
     chown system graphics /sys/kernel/debug/sync/sw_sync
@@ -254,6 +256,15 @@ on boot
 
     # OTG
     write /sys/class/power_supply/usb/otg_switch 1
+
+    # Touchpanel
+    write /proc/touchpanel/double_tap_enable 1
+
+    # Add for touchscreen firmware update check
+    write /proc/touchpanel/tp_fw_update 1
+
+    # Enable oppo's touchpanel direction
+    write /proc/touchpanel/oppo_tp_direction 1
 
 # msm specific files that need to be created on /data
 on post-fs-data
