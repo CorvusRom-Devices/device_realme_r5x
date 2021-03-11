@@ -137,6 +137,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.display.cabl=0 \
     ro.hardware.vulkan=adreno \
     ro.hardware.egl=adreno \
+    ro.config.avoid_gfx_accel=true \
     vendor.display.disable_skip_validate=1 \
     vendor.gralloc.disable_ubwc=0 \
     vendor.display.enable_default_color_mode=1 \
