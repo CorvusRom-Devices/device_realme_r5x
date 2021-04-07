@@ -74,7 +74,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.audio.feature.usb_offload_burst_mode.enable=false \
     vendor.audio.feature.usb_offload_sidetone_volume.enable=false \
     vendor.audio.feature.vbat.enable=true \
-    vendor.audio.feature.wsa.enable=false
+    vendor.audio.feature.wsa.enable=false \
+    vendor.fastrpc.disable.adsprpcd_sensorspd.daemon=1
 
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
