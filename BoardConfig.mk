@@ -22,9 +22,18 @@
 # definition file).
 #
 
-COMMON_PATH := device/realme/sm6125-common
+DEVICE_PATH := device/realme/RMX1911
 
 BOARD_VENDOR := realme
+
+BUILD_BROKEN_DUP_RULES := true
+
+# Boot animation
+TARGET_SCREEN_HEIGHT := 1600
+TARGET_SCREEN_WIDTH := 720
+
+# Display
+TARGET_SCREEN_DENSITY := 320
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := trinket
@@ -66,6 +75,8 @@ TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/realme/sm6125
 TARGET_KERNEL_CLANG_COMPILE := true
+include device/realme/RMX1911-kernel/BoardConfigKernel.mk
+TARGET_KERNEL_CONFIG := vendor/trinket-perf_defconfig
 
 # QCOM hardware
 BOARD_USES_QCOM_HARDWARE := true
@@ -85,7 +96,7 @@ AUDIO_FEATURE_ENABLED_GEF_SUPPORT := true
 AUDIO_FEATURE_ENABLED_FM_POWER_OPT := true
 
 # Bluetooth
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(COMMON_PATH)/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
 TARGET_FWK_SUPPORTS_FULL_VALUEADDS := true
 
 # Camera
@@ -100,7 +111,7 @@ BOARD_USES_QCNE := true
 
 # Display
 USE_DEVICE_SPECIFIC_DISPLAY := true
-DEVICE_SPECIFIC_DISPLAY_PATH := $(COMMON_PATH)/qcom-caf/display
+DEVICE_SPECIFIC_DISPLAY_PATH := $(DEVICE_PATH)/qcom-caf/display
 TARGET_USES_HWC2 := true
 TARGET_USES_GRALLOC1 := true
 TARGET_USES_ION := true
@@ -132,11 +143,11 @@ BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := default
 LOC_HIDL_VERSION := 3.0
 
 # HIDL
-DEVICE_MANIFEST_FILE := $(COMMON_PATH)/configs/manifests/manifest.xml
-DEVICE_MATRIX_FILE := $(COMMON_PATH)/configs/manifests/compatibility_matrix.xml
+DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/configs/manifests/manifest.xml
+DEVICE_MATRIX_FILE := $(DEVICE_PATH)/configs/manifests/compatibility_matrix.xml
 
 # Init
-TARGET_INIT_VENDOR_LIB := //$(COMMON_PATH):libinit_trinket
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_trinket
 TARGET_RECOVERY_DEVICE_MODULES := libinit_trinket
 
 # Keystore
@@ -166,7 +177,10 @@ TARGET_COPY_OUT_VENDOR := vendor
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 
-TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 3221225472
+BOARD_VENDORIMAGE_PARTITION_SIZE := 1073741824
+
+TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
 
 # Power
 BOARD_POWER_CUSTOM_BOARD_LIB := libpower_6125
@@ -177,16 +191,19 @@ BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_INCLUDE_RECOVERY_DTBO := true
 BOARD_HAS_LARGE_FILESYSTEM := true
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
-TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/rootdir/etc/fstab.qcom
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
 
 # RIL
 TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
 
+# Security patch level
+VENDOR_SECURITY_PATCH := 2020-11-05
+
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
-BOARD_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
-BOARD_PLAT_PUBLIC_SEPOLICY_DIR += $(COMMON_PATH)/sepolicy/public
-BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(COMMON_PATH)/sepolicy/private
+BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+BOARD_PLAT_PUBLIC_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/public
+BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
 
 # Treble
 PRODUCT_VENDOR_MOVE_ENABLED := true
@@ -211,4 +228,4 @@ WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # Inherit the proprietary files
-include vendor/realme/sm6125-common/BoardConfigVendor.mk
+-include vendor/realme/RMX1911/BoardConfigVendor.mk

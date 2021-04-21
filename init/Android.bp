@@ -24,6 +24,6 @@ realme_trinket_init_library_static {
     include_dirs: [
         "system/core/base/include",
         "system/core/init",
-        "device/realme/sm6125-common"
+        "device/realme/RMX1911"
     ]
 }
