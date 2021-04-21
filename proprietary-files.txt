@@ -112,6 +112,7 @@ vendor/lib/rfsa/adsp/libfastcvdsp_skel.so
 vendor/lib/rfsa/adsp/libhexagon_nn_skel.so
 vendor/lib/rfsa/adsp/libsns_device_mode_skel.so
 vendor/lib/rfsa/adsp/libsns_low_lat_stream_skel.so
+vendor/lib/rfsa/adsp/misound_res.bin
 
 # Alarm
 -product/app/PowerOffAlarm/PowerOffAlarm.apk
@@ -142,6 +143,16 @@ vendor/lib/libsurround_3mic_proc.so
 
 # Audio FX modules
 vendor/lib/soundfx/libasphere.so
+
+# Audio hardware
+vendor/lib/hw/audio.primary.trinket.so
+vendor/lib/libaudio_log_utils.so
+vendor/lib/libaudioalsa.so
+vendor/lib/libtinycompress.so
+vendor/lib64/hw/audio.primary.trinket.so
+vendor/lib64/libaudio_log_utils.so
+vendor/lib64/libaudioalsa.so
+vendor/lib64/libtinycompress.so
 
 # Audio (A2dp)
 vendor/lib/btaudio_offload_if.so
