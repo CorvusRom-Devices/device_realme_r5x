@@ -75,7 +75,7 @@ TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/realme/sm6125
 TARGET_KERNEL_CLANG_COMPILE := true
-include device/realme/RMX1911-kernel/BoardConfigKernel.mk
+include device/realme/RMX1911/kernel/BoardConfigKernel.mk
 TARGET_KERNEL_CONFIG := vendor/trinket-perf_defconfig
 
 # QCOM hardware

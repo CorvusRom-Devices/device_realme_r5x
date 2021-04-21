@@ -311,7 +311,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sec_config:$(TARGET_COPY_OUT_VENDOR)/etc/sec_config
 
 # Kernel
-$(call inherit-product, device/realme/RMX1911-kernel/kernel.mk)
+$(call inherit-product, device/realme/RMX1911/kernel/kernel.mk)
 
 # Lights
 PRODUCT_PACKAGES += \
