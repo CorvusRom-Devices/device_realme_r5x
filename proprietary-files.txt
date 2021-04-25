@@ -89,28 +89,28 @@ vendor/etc/acdbdata/homer/Headset_cal.acdb
 vendor/etc/acdbdata/homer/Speaker_cal.acdb
 vendor/etc/acdbdata/homer/workspaceFile.qwsp
 
-# ADSP
-vendor/bin/adsprpcd
-vendor/lib/libadsp_default_listener.so
-vendor/lib/libadsprpc.so
-vendor/lib/libmdsprpc.so
-vendor/lib/libsdsprpc.so
-vendor/lib64/libadsp_default_listener.so
-vendor/lib64/libadsprpc.so
-vendor/lib64/libmdsprpc.so
-vendor/lib64/libsdsprpc.so
+# ADSP - from LA.UM.9.11.r1-02800-NICOBAR.0
+vendor/bin/adsprpcd|c8a45eb83a6d70dcbcc1b8ec574391b49e8ca8b9
+vendor/etc/init/vendor.qti.adsprpc-sscrpc-service.rc|96b08f4e97ef20e20a8d7f89212a5549abe66666
+vendor/lib/libadsp_default_listener.so|aebe95ff3eeb279a642770db5f1383e5aefc4d2f
+vendor/lib/libadsprpc.so|5ca6759bd24276b05ef25ebfbf181e942b9d8a89
+vendor/lib/libmdsprpc.so|7d749e52e322e37438135e5aec012af26c8f9ba8
+vendor/lib/libsdsprpc.so|4a02a559c07175ee180688d65cb2cafdd8142070
+vendor/lib64/libadsp_default_listener.so|aa3b51b544032a250ab02687c0200152f80a23dd
+vendor/lib64/libadsprpc.so|7c31e4e2b94fa03f1e03c876fa583ad8f4a13a1d
+vendor/lib64/libmdsprpc.so|bba8a7fff49e41e7aa26c13ef26bca2f24bf36d7
+vendor/lib64/libsdsprpc.so|abadbab1ed4e1e9c826cb1242f7aea12e571e312
 
-# ADSP Modules
-vendor/lib/rfsa/adsp/libVC1Dec.so
-vendor/lib/rfsa/adsp/libVC1DecDsp_skel.so
-vendor/lib/rfsa/adsp/libapps_mem_heap.so
-vendor/lib/rfsa/adsp/libdspCV_skel.so
-vendor/lib/rfsa/adsp/libfastcvadsp.so
-vendor/lib/rfsa/adsp/libfastcvdsp_skel.so
-vendor/lib/rfsa/adsp/libhexagon_nn_skel.so
-vendor/lib/rfsa/adsp/libsns_device_mode_skel.so
-vendor/lib/rfsa/adsp/libsns_low_lat_stream_skel.so
-vendor/lib/rfsa/adsp/misound_res.bin
+# ADSP modules - from LA.UM.9.11.r1-02800-NICOBAR.0
+vendor/lib/rfsa/adsp/libVC1Dec.so|732ede3ede9e6e1b09c439156f62a07d8fa0ee3e
+vendor/lib/rfsa/adsp/libVC1DecDsp_skel.so|eff059c5a29a44d205bd60ad24aecc46416e939e
+vendor/lib/rfsa/adsp/libapps_mem_heap.so|1cdac354c585c0d236d77b0888ebd5894b333326
+vendor/lib/rfsa/adsp/libdspCV_skel.so|c6034c389845a94a4054dd0fe9a0381adbf086e5
+vendor/lib/rfsa/adsp/libfastcvadsp.so|5c86de2533d60534ce5b07e6be13bcf988e4b03b
+vendor/lib/rfsa/adsp/libfastcvdsp_skel.so|f3f79fd19ade4ec0947fd901d216e9c39ef5e276
+vendor/lib/rfsa/adsp/libhexagon_nn_skel.so|9e9dbfa1b565a6cf93006c1f87d5ee57d173fd23
+vendor/lib/rfsa/adsp/libsns_device_mode_skel.so|733a5b8861bb6eb1285bb8982992531c94800997
+vendor/lib/rfsa/adsp/libsns_low_lat_stream_skel.so|c30bb30eecf968e02f72c055d3cc13a7f769644f
 
 # Alarm
 -product/app/PowerOffAlarm/PowerOffAlarm.apk
@@ -2766,7 +2766,7 @@ vendor/lib64/hw/android.hardware.camera.provider@2.4-impl.so
 vendor/lib64/vendor.qti.hardware.camera.device@1.0.so
 vendor/lib64/vendor.qti.hardware.camera.device@3.2.so
 
-# Camera sensors
+# Camera sensor
 vendor/lib/libmmcamera_laurus_gc2375_qtech.so
 vendor/lib/libmmcamera_laurus_imx582_qtech.so
 vendor/lib/libmmcamera_laurus_imx586_qtech.so
@@ -2798,12 +2798,15 @@ vendor/firmware/cpp_firmware_v1_5_2.fw
 vendor/firmware/cpp_firmware_v1_6_0.fw
 vendor/firmware/cpp_firmware_v1_8_0.fw
 
-# CDSP
-vendor/bin/cdsprpcd
-vendor/lib/libcdsp_default_listener.so
-vendor/lib/libcdsprpc.so
-vendor/lib64/libcdsp_default_listener.so
-vendor/lib64/libcdsprpc.so
+# CDSP - from LA.UM.9.11.r1-02800-NICOBAR.0
+vendor/bin/cdsprpcd|8f541eab74d52bff8d73f7f280e085c4bf706e99
+vendor/etc/init/vendor.qti.cdsprpc-service.rc|36772b70216796e8ef19376d9c6a81ee9ffff549
+vendor/lib/libcdsprpc.so|a15b2b75df4542971b22806a19ffd44eb54f7e3c
+vendor/lib/libcdsp_default_listener.so|49dbdd4c8c73a21619569f3723a71b3467e73e75
+vendor/lib/libsysmon_cdsp_skel.so|d30f7863f72cbcb6d5f657ab780bb53e02e1aaa4
+vendor/lib64/libcdsprpc.so|70b0943341f90beb05cd4636dc3949f732538277
+vendor/lib64/libcdsp_default_listener.so|10907139f8fe737cbffba80947082d83e1c019d8
+vendor/lib64/libsysmon_cdsp_skel.so|e5ba4d173b0e09d736b16474ed2f57874cb91916
 
 # Certificate Authority - from ginkgo MIUI 21.3.3 China Beta
 -vendor/app/CACertService/CACertService.apk|ed37918e747b23159618e4d87b78bacf645bac5e
@@ -2971,6 +2974,13 @@ vendor/lib/mediadrm/libwvdrmengine.so
 vendor/lib64/liboemcrypto.so|14289b52bddd8d5ad100452c475cf4cbedca67cb
 vendor/lib/liboemcrypto.so|822a8413aa5229e66b090113295f79d6839c004f
 vendor/lib/libwvhidl.so|aaee55dbe013214b53313a2153d4990478a4ee17
+
+# DSP - from LA.UM.9.11.r1-02800-NICOBAR.0
+vendor/bin/dspservice|c7809e32581d5c6efac65a3a7689f43526c17bb8
+vendor/etc/init/vendor.qti.hardware.dsp@1.0-service.rc|fbf2bb38ca6bdddf98c7123da9e1f263a4eec55f
+vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy|f060101b26d3674bb173e5fc95e118f56a8ac15d
+vendor/lib/vendor.qti.hardware.dsp@1.0.so|f4375a7bf2e199ee091dc3b5a75caf0ffab63cda
+vendor/lib64/vendor.qti.hardware.dsp@1.0.so|ef373150851ed97f25d9df47942032fd95071fd3
 
 # FM
 lib64/fm_helium.so
@@ -3205,6 +3215,10 @@ vendor/lib64/libsdm-diag.so|55dafc05ba68666f10412a534f7122d7f45bf403
 vendor/lib64/libsdm-disp-vndapis.so|9ab6725a5efba29b77d1d6ab33e10e3ff3296960
 vendor/lib64/libsdmextension.so|3f1d81e0025de6721ed45697bf97003dd57b2847
 vendor/lib64/libtinyxml2_1.so|92101861d95cbdf9625d192d0b2295baa5960b68
+
+# Hang guard - from LA.UM.9.11.r1-02800-NICOBAR.0
+vendor/bin/hang_guard|98a661ebb11dd5e3876e6c9c0c751b640ac70cd7
+vendor/etc/init/hang_guard.rc|365a48f4c25cd360a011eb78c1d970703ee440eb
 
 # IPA
 vendor/firmware/ipa_fws.b00
@@ -3572,22 +3586,50 @@ vendor/lib64/libscveObjectTracker_stub.so
 vendor/lib64/libscvePanorama_lite.so
 vendor/lib64/libscvePanorama.so
 
-# Sensors
-vendor/bin/hw/android.hardware.sensors@2.0-service
-vendor/bin/sensors.qti
-vendor/etc/init/android.hardware.sensors@2.0-service.rc
-vendor/etc/sensors/hals.conf
-vendor/lib/android.hardware.sensors@2.0-impl.so
+# Sensor HAL
 vendor/lib/sensors.ssc.so
-vendor/lib64/android.hardware.sensors@2.0-impl.so
-vendor/lib64/libsensorcal.so
-vendor/lib64/libsensorslog.so
-vendor/lib64/libsns_fastRPC_util.so
-vendor/lib64/libsns_low_lat_stream_stub.so
-vendor/lib64/libsnsdiaglog.so
-vendor/lib64/libssc.so
-vendor/lib64/libssc_default_listener.so
 vendor/lib64/sensors.ssc.so
+
+# Sensors - from LA.UM.9.11.r1-02800-NICOBAR.0
+vendor/bin/init.qcom.sensors.sh|454c6de8c65b9ad1c41f063544871a4ba0665689
+vendor/bin/sensors.qti|576e4d9ce98c945ae6640b516614fdefe177b4e8
+vendor/etc/init/init.vendor.sensors.rc|8d286f50fd261dc8843c6a208386b535cc07641e
+vendor/etc/init/vendor.sensors.qti.rc|f34fc966af816b50f10ae7520b33863961a14478
+vendor/etc/sensors/hals.conf|bf3677cbfa5ce5735662e8c259cb027969f65c87
+vendor/lib/rfsa/adsp/libsns_device_mode_skel.so|733a5b8861bb6eb1285bb8982992531c94800997
+vendor/lib/rfsa/adsp/libsns_low_lat_stream_skel.so|c30bb30eecf968e02f72c055d3cc13a7f769644f
+vendor/lib/libsensorslog.so|a708768c9f7f404ef6bc3c25bbcf25f3de5bc85f
+vendor/lib/libsnsapi.so|becd0a1224b816ce836203de3764acbd9fa27454
+vendor/lib/libsnsdiaglog.so|3a9ecd264974b433eadf874eaf67c016a4b6436d
+vendor/lib/libsns_device_mode_stub.so|a4f6ad33fea81a1975ea74c305606c741d8675f3
+vendor/lib/libsns_fastRPC_util.so|f9fced1828893f0df7ad4618a284cfa82aa414eb
+vendor/lib/libsns_low_lat_stream_stub.so|7d9cf18b873311c9639f4e7de3abe593f77ce971
+vendor/lib/libsns_registry_skel.so|0d4a31d661723d9cedd8ad14c7bd3aeeab1762ee
+vendor/lib/libssc.so|4e5c3f1407259ba8c07ec3d8f037e779e35ab50f
+vendor/lib/libssc_default_listener.so|c78f0be44a08b75ba10f2f1e692c6f1c487114fc
+vendor/lib64/rfsa/adsp/libsns_device_mode_skel.so|733a5b8861bb6eb1285bb8982992531c94800997
+vendor/lib64/rfsa/adsp/libsns_low_lat_stream_skel.so|c30bb30eecf968e02f72c055d3cc13a7f769644f
+vendor/lib64/libsensorslog.so|c3c3a0a56a0a5e43ae3f1ec5ee9a99d9930d7180
+vendor/lib64/libsnsapi.so|6bd099abd53396d2de6c1d4a25ac83982785b47e
+vendor/lib64/libsnsdiaglog.so|376755d038ca5cd09ddde34dd3a320e72757db8a
+vendor/lib64/libsns_device_mode_stub.so|87c0588082941ad28f1e1166c35bf2b1a48d9d4f
+vendor/lib64/libsns_fastRPC_util.so|734366794d538ab79e019e623781157aa36dfac6
+vendor/lib64/libsns_low_lat_stream_stub.so|732284783173e95b60429bc830f9db06f764d3da
+vendor/lib64/libsns_registry_skel.so|117622eb287191079d3e70ed1781c081ae07891f
+vendor/lib64/libssc.so|9dfb91a2aeeeb0f6b84f1296490780805ab008e0
+vendor/lib64/libssc_default_listener.so|1cb532f9014d7c1fe773ff46b365d6cc4a07e3a6
+
+# Sensors calibration - from LA.UM.9.11.r1-02800-NICOBAR.0
+system_ext/framework/vendor.qti.hardware.sensorscalibrate-V1.0-java.jar|01d8f70b5687082dd9d19beca565a789d404837c
+vendor/bin/hw/vendor.qti.hardware.sensorscalibrate@1.0-service|6578e537e3b14c9345ce1be832650f13d8d65085
+vendor/etc/init/vendor.qti.hardware.sensorscalibrate@1.0-service.rc|449c88778d880c0d47cc4d651fc60c4c424c1a3f
+vendor/etc/permissions/vendor-qti-hardware-sensorscalibrate.xml|f4884c1776c9f77c24bfce853fe22627ea4b7f79
+vendor/lib/hw/vendor.qti.hardware.sensorscalibrate@1.0-impl.so|daf03b24c01874d51acb3ef622ed401335c83bcd
+vendor/lib/libsensorcal.so|d646aa7be1e1316c48cf57389d8e59e2305fd39c
+vendor/lib/vendor.qti.hardware.sensorscalibrate@1.0.so|32ca7896c00a2e20b3f833db5f1981949df245a0
+vendor/lib64/hw/vendor.qti.hardware.sensorscalibrate@1.0-impl.so|d743ceadc9c97abc0ded4d40e9b965bb4a83a782
+vendor/lib64/libsensorcal.so|6915d68f69cadfd66c25dd243fdbb5a3acbe686e
+vendor/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so|1e3d653eff4f3d6df49d6492dd1327f984f1303d
 
 # Sensor configs
 vendor/etc/sensors/config/ak991x_0.json
