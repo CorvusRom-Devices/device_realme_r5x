@@ -2603,9 +2603,6 @@ vendor/lib64/libmmcamera_faceproc2.so
 vendor/lib64/libmmcamera_tintless_algo.so
 vendor/lib64/libmmcamera_tintless_bg_pca_algo.so
 
-# Camera service
-lib/libcameraservice.so
-
 # CDSP - from LA.UM.9.11.r1-02800-NICOBAR.0
 vendor/bin/cdsprpcd|8f541eab74d52bff8d73f7f280e085c4bf706e99
 vendor/etc/init/vendor.qti.cdsprpc-service.rc|36772b70216796e8ef19376d9c6a81ee9ffff549
