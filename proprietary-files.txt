@@ -230,7 +230,6 @@ vendor/lib64/libcapiv2svacnn.so
 vendor/lib64/libcapiv2vop.so
 vendor/lib64/libDxHdcp.so
 vendor/lib64/libmegface.so
-vendor/lib64/libmegvii_superiq.so
 vendor/lib64/libmpbase.so
 vendor/lib64/libseemore.so
 vendor/lib64/libswvdec.so
@@ -2341,9 +2340,6 @@ vendor/etc/camera/gender_smile_race_mask_MTNet_2.1.1.model
 vendor/etc/camera/hi846_sunny_chromatix.xml
 vendor/etc/camera/imx386_qtech_chromatix.xml
 vendor/etc/camera/imx386_qtech_monets_chromatix.xml
-vendor/etc/camera/megvii/cache
-vendor/etc/camera/megvii/siq_ocl_cache
-vendor/etc/camera/megvii/superiq_model
 vendor/etc/camera/M_Attribute_Gender_Age_1.0.model
 vendor/etc/camera/ov/arc_golden.bin
 vendor/etc/camera/ov02a1b_holitech_chromatix.xml
