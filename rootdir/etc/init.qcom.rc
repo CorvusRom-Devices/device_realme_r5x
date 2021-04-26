@@ -586,6 +586,7 @@ service qcom-c_main-sh /vendor/bin/init.class_main.sh
     oneshot
 
 on property:vold.decrypt=trigger_restart_framework
+    restart vendor.audio-hal
     start qcom-c_main-sh
     start wcnss-service
 
