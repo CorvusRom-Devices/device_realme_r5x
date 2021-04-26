@@ -175,6 +175,7 @@ vendor/lib/rfsa/adsp/capi_v2_aptX_HD.so
 
 # Camera
 vendor/lib/hw/camera.trinket.so
+vendor/lib/libalgo.public.so
 vendor/lib/libbase64.so
 vendor/lib/libcamera2ndk_vendor.so
 vendor/lib/libcamera_core_hwi.so
@@ -224,6 +225,7 @@ vendor/lib/libVDPostureDetection.so
 vendor/lib/libVDSuperPhotoAPI.so
 vendor/lib/libvideoutils.so
 vendor/lib/imx386_PdafLibrary.so
+vendor/lib64/libalgo.public.so
 vendor/lib64/libbase64.so
 vendor/lib64/libcamera2ndk_vendor.so
 vendor/lib64/libcapiv2svacnn.so
