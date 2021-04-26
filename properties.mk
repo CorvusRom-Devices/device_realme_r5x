@@ -107,9 +107,22 @@ PRODUCT_PRODUCT_PROPERTIES += \
 
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.vendor.camera.preview.ubwc=0 \
-    vendor.video.disable.ubwc=1 \
+    persist.vendor.camera.expose.aux=1 \
+    vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,org.lineageos.snap \
     vidc.enc.dcvs.extra-buff-count=2
+
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    camera.disable_zsl_mode=true \
+    persist.camera.aifb=1 \
+    persist.camera.filter.version=1 \
+    persist.dualcam.lpm.enable=1 \
+    persist.vendor.camera.preview.ubwc=0 \
+    ro.camera.attr.detect.enable=1 \
+    ro.camera.dualcam.type=2 \
+    ro.camera.hfr.enable=1 \
+    ro.camera.relight.enable=0 \
+    ro.camera.sensor.aux2m=1 \
+    ro.camera.temperature.limit=450
 
 # Charger
 PRODUCT_PRODUCT_PROPERTIES += \
