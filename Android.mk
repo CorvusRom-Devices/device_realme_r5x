@@ -44,15 +44,15 @@ FIRMWARE_MOUNT_POINT := $(TARGET_OUT_VENDOR)/firmware_mnt
 BT_FIRMWARE_MOUNT_POINT := $(TARGET_OUT_VENDOR)/bt_firmware
 DSP_MOUNT_POINT := $(TARGET_OUT_VENDOR)/dsp
 
-$(FIRMWARE_MOUNT_POINT):
+$(FIRMWARE_MOUNT_POINT): $(LOCAL_INSTALLED_MODULE)
 	@echo "Creating $(FIRMWARE_MOUNT_POINT)"
 	@mkdir -p $(TARGET_OUT_VENDOR)/firmware_mnt
 
-$(BT_FIRMWARE_MOUNT_POINT):
+$(BT_FIRMWARE_MOUNT_POINT): $(LOCAL_INSTALLED_MODULE)
 	@echo "Creating $(BT_FIRMWARE_MOUNT_POINT)"
 	@mkdir -p $(TARGET_OUT_VENDOR)/bt_firmware
 
-$(DSP_MOUNT_POINT):
+$(DSP_MOUNT_POINT): $(LOCAL_INSTALLED_MODULE)
 	@echo "Creating $(DSP_MOUNT_POINT)"
 	@mkdir -p $(TARGET_OUT_VENDOR)/dsp
 
@@ -65,6 +65,18 @@ $(RFS_MSM_ADSP_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	@mkdir -p $(dir $@)/readonly/vendor
 	$(hide) ln -sf /data/vendor/tombstones/rfs/lpass $@/ramdumps
 	$(hide) ln -sf /mnt/vendor/persist/rfs/msm/adsp $@/readwrite
+	$(hide) ln -sf /mnt/vendor/persist/rfs/shared $@/shared
+	$(hide) ln -sf /mnt/vendor/persist/hlos_rfs/shared $@/hlos
+	$(hide) ln -sf /vendor/firmware_mnt $@/readonly/firmware
+	$(hide) ln -sf /vendor/firmware $@/readonly/vendor/firmware
+
+RFS_MSM_CDSP_SYMLINKS := $(TARGET_OUT_VENDOR)/rfs/msm/cdsp/
+$(RFS_MSM_CDSP_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
+	@echo "Creating RFS MSM CDSP folder structure: $@"
+	@rm -rf $@/*
+	@mkdir -p $(dir $@)/readonly/vendor
+	$(hide) ln -sf /data/vendor/tombstones/rfs/cdsp $@/ramdumps
+	$(hide) ln -sf /mnt/vendor/persist/rfs/msm/cdsp $@/readwrite
 	$(hide) ln -sf /mnt/vendor/persist/rfs/shared $@/shared
 	$(hide) ln -sf /mnt/vendor/persist/hlos_rfs/shared $@/hlos
 	$(hide) ln -sf /vendor/firmware_mnt $@/readonly/firmware
@@ -97,7 +109,8 @@ $(RFS_MSM_SLPI_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 ALL_DEFAULT_INSTALLED_MODULES += \
     $(RFS_MSM_ADSP_SYMLINKS) \
     $(RFS_MSM_MPSS_SYMLINKS) \
-    $(RFS_MSM_SLPI_SYMLINKS)
+    $(RFS_MSM_SLPI_SYMLINKS) \
+    $(RFS_MSM_CDSP_SYMLINKS)
 
 EGL_SYMLINK := $(TARGET_OUT_VENDOR)/lib/libGLESv2_adreno.so
 $(EGL_SYMLINK): $(LOCAL_INSTALLED_MODULE)
@@ -105,16 +118,4 @@ $(EGL_SYMLINK): $(LOCAL_INSTALLED_MODULE)
 	$(hide) ln -sf egl/$(notdir $@) $@
 
 ALL_DEFAULT_INSTALLED_MODULES += $(EGL_SYMLINK)
-
-IMS_LIBS := libimscamera_jni.so libimsmedia_jni.so
-IMS_SYMLINKS := $(addprefix $(TARGET_OUT_PRODUCT_APPS_PRIVILEGED)/ims/lib/arm64/,$(notdir $(IMS_LIBS)))
-$(IMS_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
-	@echo "IMS lib link: $@"
-	@mkdir -p $(dir $@)
-	@rm -rf $@
-	$(hide) ln -sf /product/lib64/$(notdir $@) $@
-
-ALL_DEFAULT_INSTALLED_MODULES += $(IMS_SYMLINKS)
-
-include $(call all-makefiles-under,$(LOCAL_PATH))
 endif
