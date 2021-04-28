@@ -130,7 +130,9 @@ PRODUCT_PRODUCT_PROPERTIES += \
 
 # CNE
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    persist.vendor.cne.feature=1
+    persist.vendor.cne.feature=1 \
+    persist.vendor.dpm.feature=11 \
+    persist.vendor.dpmhalservice.enable=1
 
 # Crypto
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -140,6 +142,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Dalvik
 PRODUCT_PROPERTY_OVERRIDES += \
 	dalvik.vm.dex2oat64.enabled=true
+
+# Data
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.vendor.data.iwlan.enable=true \
+    ro.telephony.iwlan_operation_mode=legacy
 
 # Dex
 PRODUCT_PRODUCT_PROPERTIES += \
