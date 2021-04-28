@@ -176,6 +176,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.display.enable_default_color_mode=1 \
     vendor.gralloc.enable_fb_ubwc=1
 
+# DRM
+drm.service.enabled=true
+
 # Fling
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.min.fling_velocity=160 \
