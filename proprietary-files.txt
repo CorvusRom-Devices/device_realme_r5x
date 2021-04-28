@@ -1,12 +1,76 @@
-# ACDB loader
-vendor/lib64/libacdb-fts.so
-vendor/lib64/libacdbloader.so
-vendor/lib64/libacdbrtac.so
+# ADSP - from LA.UM.9.11.r1-02800-NICOBAR.0
+vendor/bin/adsprpcd|c8a45eb83a6d70dcbcc1b8ec574391b49e8ca8b9
+vendor/etc/init/vendor.qti.adsprpc-sscrpc-service.rc|96b08f4e97ef20e20a8d7f89212a5549abe66666
+vendor/lib/libadsp_default_listener.so|aebe95ff3eeb279a642770db5f1383e5aefc4d2f
+vendor/lib/libadsprpc.so|5ca6759bd24276b05ef25ebfbf181e942b9d8a89
+vendor/lib/libmdsprpc.so|7d749e52e322e37438135e5aec012af26c8f9ba8
+vendor/lib/libsdsprpc.so|4a02a559c07175ee180688d65cb2cafdd8142070
+vendor/lib64/libadsp_default_listener.so|aa3b51b544032a250ab02687c0200152f80a23dd
+vendor/lib64/libadsprpc.so|7c31e4e2b94fa03f1e03c876fa583ad8f4a13a1d
+vendor/lib64/libmdsprpc.so|bba8a7fff49e41e7aa26c13ef26bca2f24bf36d7
+vendor/lib64/libsdsprpc.so|abadbab1ed4e1e9c826cb1242f7aea12e571e312
+
+# ADSP modules - from LA.UM.9.11.r1-02800-NICOBAR.0
+vendor/lib/rfsa/adsp/libVC1Dec.so|732ede3ede9e6e1b09c439156f62a07d8fa0ee3e
+vendor/lib/rfsa/adsp/libVC1DecDsp_skel.so|eff059c5a29a44d205bd60ad24aecc46416e939e
+vendor/lib/rfsa/adsp/libapps_mem_heap.so|1cdac354c585c0d236d77b0888ebd5894b333326
+vendor/lib/rfsa/adsp/libdspCV_skel.so|c6034c389845a94a4054dd0fe9a0381adbf086e5
+vendor/lib/rfsa/adsp/libfastcvadsp.so|5c86de2533d60534ce5b07e6be13bcf988e4b03b
+vendor/lib/rfsa/adsp/libfastcvdsp_skel.so|f3f79fd19ade4ec0947fd901d216e9c39ef5e276
+vendor/lib/rfsa/adsp/libhexagon_nn_skel.so|9e9dbfa1b565a6cf93006c1f87d5ee57d173fd23
+vendor/lib/rfsa/adsp/libsns_device_mode_skel.so|733a5b8861bb6eb1285bb8982992531c94800997
+vendor/lib/rfsa/adsp/libsns_low_lat_stream_skel.so|c30bb30eecf968e02f72c055d3cc13a7f769644f
+
+# Alarm
+-product/app/PowerOffAlarm/PowerOffAlarm.apk
+vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service
+vendor/bin/power_off_alarm
+vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc
+vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so
+vendor/lib64/vendor.qti.hardware.alarm@1.0.so
+
+# ANT+
+-lib/libantradio.so
+product/lib64/com.qualcomm.qti.ant@1.0.so
+-lib64/libantradio.so
+vendor/lib64/com.qualcomm.qti.ant@1.0.so
+vendor/lib64/hw/com.qualcomm.qti.ant@1.0-impl.so
+
+# Audio
+etc/permissions/audiosphere.xml
+framework/audiosphere.jar
 vendor/lib/libacdb-fts.so
 vendor/lib/libacdbloader.so
 vendor/lib/libacdbrtac.so
+vendor/lib/libadiertac.so
+vendor/lib/libadm.so
+vendor/lib/libaudcal.so
+vendor/lib/libaudioalsa.so
+vendor/lib/libaudioconfigstore.so
+vendor/lib/libaudioparsers.so
+vendor/lib/libdrc.so
+vendor/lib/libqtigef.so
+vendor/lib/libsurround_3mic_proc.so
+vendor/lib/soundfx/libasphere.so
+vendor/lib/soundfx/libdiraceffect.so
+vendor/lib64/libacdb-fts.so
+vendor/lib64/libacdbloader.so
+vendor/lib64/libacdbrtac.so
+vendor/lib64/libadiertac.so
+vendor/lib64/libaudcal.so
+vendor/lib64/libaudioalsa.so
+vendor/lib64/libaudioconfigstore.so
+vendor/lib64/libaudioparsers.so
+vendor/lib64/libqtigef.so
+vendor/lib64/soundfx/libasphere.so
 
-# Audio-ACDB
+# Audio (A2dp)
+vendor/lib/btaudio_offload_if.so
+vendor/lib/hw/audio.bluetooth_qti.default.so
+vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so
+vendor/lib/libbluetooth_audio_session_qti.so
+
+# Audio ACDB
 vendor/etc/acdbdata/19021/adsp_avs_config.acdb
 vendor/etc/acdbdata/19021/Bluetooth_cal.acdb
 vendor/etc/acdbdata/19021/Codec_cal.acdb
@@ -89,89 +153,42 @@ vendor/etc/acdbdata/homer/Headset_cal.acdb
 vendor/etc/acdbdata/homer/Speaker_cal.acdb
 vendor/etc/acdbdata/homer/workspaceFile.qwsp
 
-# ADSP - from LA.UM.9.11.r1-02800-NICOBAR.0
-vendor/bin/adsprpcd|c8a45eb83a6d70dcbcc1b8ec574391b49e8ca8b9
-vendor/etc/init/vendor.qti.adsprpc-sscrpc-service.rc|96b08f4e97ef20e20a8d7f89212a5549abe66666
-vendor/lib/libadsp_default_listener.so|aebe95ff3eeb279a642770db5f1383e5aefc4d2f
-vendor/lib/libadsprpc.so|5ca6759bd24276b05ef25ebfbf181e942b9d8a89
-vendor/lib/libmdsprpc.so|7d749e52e322e37438135e5aec012af26c8f9ba8
-vendor/lib/libsdsprpc.so|4a02a559c07175ee180688d65cb2cafdd8142070
-vendor/lib64/libadsp_default_listener.so|aa3b51b544032a250ab02687c0200152f80a23dd
-vendor/lib64/libadsprpc.so|7c31e4e2b94fa03f1e03c876fa583ad8f4a13a1d
-vendor/lib64/libmdsprpc.so|bba8a7fff49e41e7aa26c13ef26bca2f24bf36d7
-vendor/lib64/libsdsprpc.so|abadbab1ed4e1e9c826cb1242f7aea12e571e312
-
-# ADSP modules - from LA.UM.9.11.r1-02800-NICOBAR.0
-vendor/lib/rfsa/adsp/libVC1Dec.so|732ede3ede9e6e1b09c439156f62a07d8fa0ee3e
-vendor/lib/rfsa/adsp/libVC1DecDsp_skel.so|eff059c5a29a44d205bd60ad24aecc46416e939e
-vendor/lib/rfsa/adsp/libapps_mem_heap.so|1cdac354c585c0d236d77b0888ebd5894b333326
-vendor/lib/rfsa/adsp/libdspCV_skel.so|c6034c389845a94a4054dd0fe9a0381adbf086e5
-vendor/lib/rfsa/adsp/libfastcvadsp.so|5c86de2533d60534ce5b07e6be13bcf988e4b03b
-vendor/lib/rfsa/adsp/libfastcvdsp_skel.so|f3f79fd19ade4ec0947fd901d216e9c39ef5e276
-vendor/lib/rfsa/adsp/libhexagon_nn_skel.so|9e9dbfa1b565a6cf93006c1f87d5ee57d173fd23
-vendor/lib/rfsa/adsp/libsns_device_mode_skel.so|733a5b8861bb6eb1285bb8982992531c94800997
-vendor/lib/rfsa/adsp/libsns_low_lat_stream_skel.so|c30bb30eecf968e02f72c055d3cc13a7f769644f
-
-# Alarm
--product/app/PowerOffAlarm/PowerOffAlarm.apk
-vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service
-vendor/bin/power_off_alarm
-vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc
-vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so
-vendor/lib64/vendor.qti.hardware.alarm@1.0.so
-
-# ANT+
--lib/libantradio.so
-product/lib64/com.qualcomm.qti.ant@1.0.so
--lib64/libantradio.so
-vendor/lib64/com.qualcomm.qti.ant@1.0.so
-vendor/lib64/hw/com.qualcomm.qti.ant@1.0-impl.so
-
-# Audio
-vendor/lib64/libadiertac.so
-vendor/lib64/libaudcal.so
-vendor/lib64/libaudioparsers.so
-vendor/lib64/libqtigef.so
-vendor/lib/libadiertac.so
-vendor/lib/libaudcal.so
-vendor/lib/libaudioparsers.so
-vendor/lib/libdrc.so
-vendor/lib/libqtigef.so
-vendor/lib/libsurround_3mic_proc.so
-
-# Audio FX modules
-vendor/lib/soundfx/libasphere.so
-
-# Audio hardware
+# Audio-Hardware
 vendor/lib/hw/audio.primary.trinket.so
+vendor/lib/libaudioEngineerTest.so
 vendor/lib/libaudio_log_utils.so
-vendor/lib/libaudioalsa.so
 vendor/lib/libtinycompress.so
 vendor/lib64/hw/audio.primary.trinket.so
+vendor/lib64/libaudioEngineerTest.so
 vendor/lib64/libaudio_log_utils.so
-vendor/lib64/libaudioalsa.so
 vendor/lib64/libtinycompress.so
 
-# Audio (A2dp)
-vendor/lib/btaudio_offload_if.so
-vendor/lib/hw/audio.bluetooth_qti.default.so
-vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so
-vendor/lib/libbluetooth_audio_session_qti.so
-vendor/lib64/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so
+# Audio Power Amplifier
+vendor/firmware/tfa98xx.cnt
+
+# Audio KTV
+vendor/bin/hw/vendor.oppo.hardware.ktv@1.0-service
+vendor/etc/init/vendor.oppo.hardware.ktv@1.0-service.rc
+vendor/lib64/hw/vendor.oppo.hardware.ktv@1.0-impl.so
+vendor/lib64/vendor.oppo.hardware.ktv@1.0.so
+
+# AptX
+vendor/lib/rfsa/adsp/capi_v2_aptX_Classic.so
+vendor/lib/rfsa/adsp/capi_v2_aptX_HD.so
 
 # Bluetooth
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
 vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc
+vendor/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so
+vendor/lib/hw/vendor.qti.hardware.bluetooth_sar@1.0-impl.so
 vendor/lib/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so
+vendor/lib/libbtnv.so
+vendor/lib/vendor.qti.hardware.bluetooth_sar@1.0.so
 vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
 vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.0-impl.so
 vendor/lib64/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so
 vendor/lib64/libbtnv.so
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so
-
-# AptX
-vendor/lib/rfsa/adsp/capi_v2_aptX_Classic.so
-vendor/lib/rfsa/adsp/capi_v2_aptX_HD.so
 
 # Camera
 vendor/lib/hw/camera.trinket.so
