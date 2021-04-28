@@ -148,6 +148,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.data.iwlan.enable=true \
     ro.telephony.iwlan_operation_mode=legacy
 
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    persist.data.df.dev_name=rmnet_usb0 \
+    persist.vendor.data.mode=concurrent \
+    ro.vendor.use_data_netmgrd=true
+
 # Dex
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.sys.fw.dex2oat_thread_count=8
@@ -177,7 +182,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.gralloc.enable_fb_ubwc=1
 
 # DRM
-drm.service.enabled=true
+PRODUCT_PROPERTY_OVERRIDES += \
+    drm.service.enabled=true
 
 # Fling
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -226,20 +232,34 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Radio
 PRODUCT_PROPERTY_OVERRIDES += \
+    persist.dbg.volte_avail_ovr=1 \
+    persist.dbg.vt_avail_ovr=1 \
+    persist.dbg.wfc_avail_ovr=1 \
+    persist.dbg.ims_volte_enable=1 \
+    persist.vendor.radio.data_ltd_sys_ind=1 \
+    persist.vendor.radio.data_con_rprt=1 \
+    persist.radio.calls.on.ims=1 \
     persist.radio.multisim.config=dsds \
-    persist.vendor.data.mode=concurrent \
+    persist.vendor.radio.add_power_save=1 \
     persist.vendor.radio.apm_sim_not_pwdn=1 \
     persist.vendor.radio.atfwd.start=true \
     persist.vendor.radio.custom_ecc=1 \
+    persist.vendor.radio.data_ltd_sys_ind=1 \
+    persist.vendor.radio.data_con_rprt=1 \
     persist.vendor.radio.rat_on=combine \
     persist.vendor.radio.sib16_support=1 \
-    ro.telephony.default_network=22,22 \
-    ro.vendor.use_data_netmgrd=true
+    vendor.rild.libpath=/vendor/lib64/libril-qc-qmi-1.so
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    persist.radio.VT_CAM_INTERFACE=1 \
+    persist.vendor.qti.telephony.vt_cam_interface=1 \
     DEVICE_PROVISIONED=1 \
-    persist.sys.fflag.override.settings_network_and_internet_v2=true \
+    gsm.lte.ca.support=0 \
+    persist.radio.custom_exp_ecc=1 \
     ril.subscription.types=NV,RUIM \
+    rild.libpath=/system/vendor/lib64/libril-qc-hal-qmi.so \
+    ro.telephony.default_network=22,22 \
+    persist.sys.fflag.override.settings_network_and_internet_v2=true \
     telephony.lteOnCdmaDevice=1
 
 # Sensor
