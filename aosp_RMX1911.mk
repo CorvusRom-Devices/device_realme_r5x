@@ -19,16 +19,19 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 
-# Inherit some common Lineage stuff
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common PixelExperience stuff
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 # Inherit from RMX1911 device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
+TARGET_BOOT_ANIMATION_RES := 720
+TARGET_GAPPS_ARCH := arm64
+
 PRODUCT_BRAND := Realme
 PRODUCT_DEVICE := RMX1911
 PRODUCT_MANUFACTURER := Realme
-PRODUCT_NAME := lineage_RMX1911
+PRODUCT_NAME := aosp_RMX1911
 PRODUCT_MODEL := Realme 5
 
 PRODUCT_GMS_CLIENTID_BASE := android-realme
