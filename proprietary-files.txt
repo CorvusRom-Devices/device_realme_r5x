@@ -64,12 +64,6 @@ vendor/lib64/libaudioparsers.so
 vendor/lib64/libqtigef.so
 vendor/lib64/soundfx/libasphere.so
 
-# Audio (A2dp)
-vendor/lib/btaudio_offload_if.so
-vendor/lib/hw/audio.bluetooth_qti.default.so
-vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so
-vendor/lib/libbluetooth_audio_session_qti.so
-
 # Audio ACDB
 vendor/etc/acdbdata/19021/adsp_avs_config.acdb
 vendor/etc/acdbdata/19021/Bluetooth_cal.acdb
@@ -172,23 +166,39 @@ vendor/etc/init/vendor.oppo.hardware.ktv@1.0-service.rc
 vendor/lib64/hw/vendor.oppo.hardware.ktv@1.0-impl.so
 vendor/lib64/vendor.oppo.hardware.ktv@1.0.so
 
-# AptX
-vendor/lib/rfsa/adsp/capi_v2_aptX_Classic.so
-vendor/lib/rfsa/adsp/capi_v2_aptX_HD.so
+# AptX - from ginkgo MIUI 21.3.3 China Beta
+vendor/lib/rfsa/adsp/capi_v2_aptX_Classic.so|59cbdf5d84ba2ff64014941f3ad9e6c2c35e2c06
+vendor/lib/rfsa/adsp/capi_v2_aptX_HD.so|e25f1087edc95d2ff76c1e37787ca37aae2cf175
 
-# Bluetooth
-vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
-vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc
-vendor/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so
-vendor/lib/hw/vendor.qti.hardware.bluetooth_sar@1.0-impl.so
-vendor/lib/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so
-vendor/lib/libbtnv.so
-vendor/lib/vendor.qti.hardware.bluetooth_sar@1.0.so
-vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
-vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.0-impl.so
-vendor/lib64/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so
-vendor/lib64/libbtnv.so
-vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so
+# Bluetooth - from ginkgo MIUI 21.3.3 China Beta
+vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|c2ea0d91006c5a12efa07d42cae47b3008124571
+vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc|f4ee3b2da2b08647447869ade86ec63f7340accc
+vendor/lib/btaudio_offload_if.so|f191ea7ab220e9cca53e017aa99fb10a08c27582
+vendor/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so|9823c5fd0299594e2d0496d340a010b6b38c6de1
+vendor/lib/hw/audio.bluetooth_qti.default.so|c4a39c069213853448ef9c8df917a74e70be2943
+vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so|78155ba158b7a053f3334b8229dd8ff0e77ed35d
+vendor/lib/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so|4228f377b993107545e869d7418dd3abb8750ba4
+vendor/lib/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so|c0f2a7f99598c4c6571d2f844a14616a7cd31e55
+vendor/lib64/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so|fc6265cb719afac0ff0bf6722d7f4cb4b408fd7b
+vendor/lib/liba2dpoffload.so|ce6bbccc219eaa46c2761ad36677441683f3c48f
+vendor/lib/libbluetooth_audio_session_qti.so|13cc0ba6d397e7bc33b148673210a0b995a93790
+vendor/lib/libbt-hidlclient.so|48dd06ae0def32c1cc566bfc9d3fcfaf4ecd930f
+vendor/lib/libbtnv.so|dbfe5d57f0e474d641e13af0f308ed0b4a51eb64
+vendor/lib/vendor.qti.hardware.bluetooth_sar@1.0.so|39294a01a6c67f8f6f28b98daf4350e15c9bafbd
+vendor/lib/vendor.qti.hardware.bluetooth_sar@1.1.so|8a5bce6145b7989192dc38f688e4e94bfdd8cec6
+vendor/lib64/btaudio_offload_if.so|a5c365f1b0f0da9da989c1f94e52d9f9d3e40d7a
+vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so|ea763a5951a646dc018489dfb368cc72829fff44
+vendor/lib64/hw/audio.bluetooth_qti.default.so|32711e730ee694073d53267695750eab463f3a4d
+vendor/lib64/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so|9e47c6fed27f90be0da2c7c6a1ca8e0b0a29816d
+vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so|624ac893ea428a29df50336f6fe08879b1bb5c21
+vendor/lib64/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so|8c75c57ad3176116ec2eddfa2c751c73cbb54fc4
+vendor/lib64/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so|fc6265cb719afac0ff0bf6722d7f4cb4b408fd7b
+vendor/lib64/liba2dpoffload.so|f2fa685020199003e4f42699b9cc0c7c593fbc9c
+vendor/lib64/libbluetooth_audio_session_qti.so|cfc447af16b50e7e103607bffe1c49d5c44ad9fc
+vendor/lib64/libbt-hidlclient.so|da867a59f05832dcd5c116fc69e692b6a4d8c77b
+vendor/lib64/libbtnv.so|086a227f793822ef3eed15aea21a207c68feb7a9
+vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so|64de735684377aba4a33a3bb0bee25f7999bafcd
+vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so|32c763b353882c9a711a641ff9eb99fe1b0e164d
 
 # Camera
 vendor/lib/hw/camera.trinket.so
@@ -2771,7 +2781,7 @@ vendor/lib64/hw/vendor.qti.hardware.qseecom@1.0-impl.so|2af6072954c55b8d45f07bf8
 vendor/lib64/mediadrm/libwvdrmengine.so|1c09274f43d0028a8ef56b35013b5768aae62c6d
 vendor/lib64/libGPreqcancel.so|cef7983d5aceb03b4c422731c838ead1a8f3fed4
 vendor/lib64/libGPreqcancel_svc.so|99826a70059ec471bb20749d11f174245cb07d12
-vendor/lib64/libQSEEComAPI.so|435ce943184e3a2eb66ceb00371d0606fdcdcf30
+vendor/lib64/libQSEEComAPI.so|5c9eafce6b77f151df90ba08756f3670234af7ff
 vendor/lib64/libSecureUILib.so|811893d515bc140d2d636741fbfbe275bd12f771
 vendor/lib64/libStDrvInt.so|27048624bb909a77f95249a87e8d5c4099ec6704
 vendor/lib64/libdrmfs.so|6272b1ee826657dd1485f1ee131d3c2cac24383e
