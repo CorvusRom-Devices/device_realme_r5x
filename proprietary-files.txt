@@ -3456,50 +3456,33 @@ vendor/lib64/libscveObjectTracker_stub.so
 vendor/lib64/libscvePanorama_lite.so
 vendor/lib64/libscvePanorama.so
 
-# Sensor HAL
+# Sensor
+vendor/bin/hw/android.hardware.sensors@2.0-service
+vendor/bin/hw/vendor.qti.hardware.sensorscalibrate@1.0-service
+vendor/bin/sensors.qti
+vendor/etc/init/android.hardware.sensors@2.0-service.rc
+vendor/etc/init/vendor.qti.hardware.sensorscalibrate@1.0-service.rc
+vendor/etc/sensors/hals.conf
+vendor/etc/permissions/vendor-qti-hardware-sensorscalibrate.xml
+vendor/lib/hw/vendor.qti.hardware.sensorscalibrate@1.0-impl.so
+vendor/lib/android.hardware.sensors@2.0-impl.so
+vendor/lib/libsensorcal.so
+vendor/lib/libsensorslog.so
+vendor/lib/libssc.so
+vendor/lib/libssc_default_listener.so
 vendor/lib/sensors.ssc.so
+vendor/lib/vendor.qti.hardware.sensorscalibrate@1.0.so
+vendor/lib64/hw/vendor.qti.hardware.sensorscalibrate@1.0-impl.so
+vendor/lib64/android.hardware.sensors@2.0-impl.so
+vendor/lib64/libsensorcal.so
+vendor/lib64/libsensorslog.so
+vendor/lib64/libsns_fastRPC_util.so
+vendor/lib64/libsns_low_lat_stream_stub.so
+vendor/lib64/libsnsdiaglog.so
+vendor/lib64/libssc.so
+vendor/lib64/libssc_default_listener.so
 vendor/lib64/sensors.ssc.so
-
-# Sensors - from LA.UM.9.11.r1-02800-NICOBAR.0
-vendor/bin/init.qcom.sensors.sh|454c6de8c65b9ad1c41f063544871a4ba0665689
-vendor/bin/sensors.qti|576e4d9ce98c945ae6640b516614fdefe177b4e8
-vendor/etc/init/init.vendor.sensors.rc|8d286f50fd261dc8843c6a208386b535cc07641e
-vendor/etc/init/vendor.sensors.qti.rc|f34fc966af816b50f10ae7520b33863961a14478
-vendor/etc/sensors/hals.conf|bf3677cbfa5ce5735662e8c259cb027969f65c87
-vendor/lib/rfsa/adsp/libsns_device_mode_skel.so|733a5b8861bb6eb1285bb8982992531c94800997
-vendor/lib/rfsa/adsp/libsns_low_lat_stream_skel.so|c30bb30eecf968e02f72c055d3cc13a7f769644f
-vendor/lib/libsensorslog.so|a708768c9f7f404ef6bc3c25bbcf25f3de5bc85f
-vendor/lib/libsnsapi.so|becd0a1224b816ce836203de3764acbd9fa27454
-vendor/lib/libsnsdiaglog.so|3a9ecd264974b433eadf874eaf67c016a4b6436d
-vendor/lib/libsns_device_mode_stub.so|a4f6ad33fea81a1975ea74c305606c741d8675f3
-vendor/lib/libsns_fastRPC_util.so|f9fced1828893f0df7ad4618a284cfa82aa414eb
-vendor/lib/libsns_low_lat_stream_stub.so|7d9cf18b873311c9639f4e7de3abe593f77ce971
-vendor/lib/libsns_registry_skel.so|0d4a31d661723d9cedd8ad14c7bd3aeeab1762ee
-vendor/lib/libssc.so|4e5c3f1407259ba8c07ec3d8f037e779e35ab50f
-vendor/lib/libssc_default_listener.so|c78f0be44a08b75ba10f2f1e692c6f1c487114fc
-vendor/lib64/rfsa/adsp/libsns_device_mode_skel.so|733a5b8861bb6eb1285bb8982992531c94800997
-vendor/lib64/rfsa/adsp/libsns_low_lat_stream_skel.so|c30bb30eecf968e02f72c055d3cc13a7f769644f
-vendor/lib64/libsensorslog.so|c3c3a0a56a0a5e43ae3f1ec5ee9a99d9930d7180
-vendor/lib64/libsnsapi.so|6bd099abd53396d2de6c1d4a25ac83982785b47e
-vendor/lib64/libsnsdiaglog.so|376755d038ca5cd09ddde34dd3a320e72757db8a
-vendor/lib64/libsns_device_mode_stub.so|87c0588082941ad28f1e1166c35bf2b1a48d9d4f
-vendor/lib64/libsns_fastRPC_util.so|734366794d538ab79e019e623781157aa36dfac6
-vendor/lib64/libsns_low_lat_stream_stub.so|732284783173e95b60429bc830f9db06f764d3da
-vendor/lib64/libsns_registry_skel.so|117622eb287191079d3e70ed1781c081ae07891f
-vendor/lib64/libssc.so|9dfb91a2aeeeb0f6b84f1296490780805ab008e0
-vendor/lib64/libssc_default_listener.so|1cb532f9014d7c1fe773ff46b365d6cc4a07e3a6
-
-# Sensors calibration - from LA.UM.9.11.r1-02800-NICOBAR.0
-system_ext/framework/vendor.qti.hardware.sensorscalibrate-V1.0-java.jar|01d8f70b5687082dd9d19beca565a789d404837c
-vendor/bin/hw/vendor.qti.hardware.sensorscalibrate@1.0-service|6578e537e3b14c9345ce1be832650f13d8d65085
-vendor/etc/init/vendor.qti.hardware.sensorscalibrate@1.0-service.rc|449c88778d880c0d47cc4d651fc60c4c424c1a3f
-vendor/etc/permissions/vendor-qti-hardware-sensorscalibrate.xml|f4884c1776c9f77c24bfce853fe22627ea4b7f79
-vendor/lib/hw/vendor.qti.hardware.sensorscalibrate@1.0-impl.so|daf03b24c01874d51acb3ef622ed401335c83bcd
-vendor/lib/libsensorcal.so|d646aa7be1e1316c48cf57389d8e59e2305fd39c
-vendor/lib/vendor.qti.hardware.sensorscalibrate@1.0.so|32ca7896c00a2e20b3f833db5f1981949df245a0
-vendor/lib64/hw/vendor.qti.hardware.sensorscalibrate@1.0-impl.so|d743ceadc9c97abc0ded4d40e9b965bb4a83a782
-vendor/lib64/libsensorcal.so|6915d68f69cadfd66c25dd243fdbb5a3acbe686e
-vendor/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so|1e3d653eff4f3d6df49d6492dd1327f984f1303d
+vendor/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so
 
 # Sensor configs
 vendor/etc/sensors/config/ak991x_0.json

@@ -389,7 +389,6 @@ PRODUCT_COPY_FILES += \
 # Sensors
 PRODUCT_PACKAGES += \
     libsensorndkbridge \
-    android.hardware.sensors@2.0-service.multihal \
     vendor.qti.hardware.display.mapper@1.1.vendor
 
 PRODUCT_COPY_FILES += \
