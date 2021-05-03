@@ -15,9 +15,9 @@
 
 cc_binary {
     defaults: ["hidl_defaults"],
-    name: "android.hardware.light@2.0-service.realme_trinket",
-    init_rc: ["android.hardware.light@2.0-service.realme_trinket.rc"],
-    vintf_fragments: ["android.hardware.light@2.0-service.realme_trinket.xml"],
+    name: "android.hardware.light@2.0-service.realme_r5x",
+    init_rc: ["android.hardware.light@2.0-service.realme_r5x.rc"],
+    vintf_fragments: ["android.hardware.light@2.0-service.realme_r5x.xml"],
     srcs: ["service.cpp", "Light.cpp"],
     shared_libs: [
         "libbase",

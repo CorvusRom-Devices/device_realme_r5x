@@ -14,9 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_RMX1911.mk
+    $(LOCAL_DIR)/aosp_r5x.mk
 
 COMMON_LUNCH_CHOICES := \
-    aosp_RMX1911-user \
-    aosp_RMX1911-userdebug \
-    aosp_RMX1911-eng
+    aosp_r5x-user \
+    aosp_r5x-userdebug \
+    aosp_r5x-eng

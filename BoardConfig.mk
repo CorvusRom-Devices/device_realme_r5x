@@ -22,7 +22,7 @@
 # definition file).
 #
 
-DEVICE_PATH := device/realme/RMX1911
+DEVICE_PATH := device/realme/r5x
 
 BOARD_VENDOR := realme
 
@@ -90,9 +90,9 @@ BOARD_KERNEL_OFFSET := 0x00008000
 BOARD_KERNEL_TAGS_OFFSET := 0x00000100
 BOARD_RAMDISK_OFFSET := 0x01000000
 BOARD_KERNEL_SEPARATED_DTBO := true
-TARGET_KERNEL_SOURCE := kernel/realme/RMX1911
+TARGET_KERNEL_SOURCE := kernel/realme/r5x
 TARGET_KERNEL_CLANG_COMPILE := true
-TARGET_KERNEL_CONFIG := vendor/RMX1911_defconfig
+TARGET_KERNEL_CONFIG := vendor/r5x_defconfig
 TARGET_KERNEL_CLANG_VERSION := proton
 TARGET_KERNEL_CLANG_PATH := $(shell pwd)/prebuilts/clang/host/linux-x86/clang-$(TARGET_KERNEL_CLANG_VERSION)
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-gnu-
@@ -248,4 +248,4 @@ WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # Inherit the proprietary files
--include vendor/realme/RMX1911/BoardConfigVendor.mk
+-include vendor/realme/r5x/BoardConfigVendor.mk

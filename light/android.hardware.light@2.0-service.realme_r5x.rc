@@ -11,7 +11,7 @@ on boot
 
     chown system system /sys/class/backlight/panel0-backlight/max_brightness
 
-service vendor.light-hal-2-0 /vendor/bin/hw/android.hardware.light@2.0-service.realme_trinket
+service vendor.light-hal-2-0 /vendor/bin/hw/android.hardware.light@2.0-service.realme_r5x
     interface android.hardware.light@2.0::ILight default
     class hal
     user system

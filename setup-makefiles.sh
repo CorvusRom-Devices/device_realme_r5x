@@ -8,7 +8,7 @@
 
 set -e
 
-DEVICE=RMX1911
+DEVICE=r5x
 VENDOR=realme
 
 # Load extract_utils and do some sanity checks

@@ -1,6 +1,6 @@
-# Device Tree for Realme 5 (RMX19XX)
+# Device Tree for Realme 5, Realme 5s, Realme 5i
 
-The Realme 5 is a mid-range smartphone from Realme. It was announced and released in August 2019.
+The Realme 5, Realme 5s, Realme 5i are mid-range smartphones from Realme. These are announced and released in August 2019, November 2019,January 2020.
 
 ## Device specifications
 
@@ -17,7 +17,7 @@ The Realme 5 is a mid-range smartphone from Realme. It was announced and release
 | Battery                 | 5000 mAh Li-Po (non-removable)                                  |
 | Dimensions              | 164.4 x 75.6 x 9.3 mm                                           |
 | Display                 | 6.5 inches, 102.8 cm2 (~82.7% screen-to-body ratio)             |
-| Rear Camera 1           | 12 MP, f/1.8, (wide), 1/2.9", 1.25µm, PDAF                      |
+| Rear Camera 1           | 12/48 MP, f/1.8, (wide), 1/2.9", 1.25µm, PDAF                   |
 | Rear Camera 2           | 8 MP, f/2.2, 13mm (ultrawide)                                   |
 | Rear Camera 3           | 2 MP, f/2.4, (macro)                                            |
 | Rear Camera 4           | 2 MP, f/2.4, (depth)                                            |
@@ -27,4 +27,4 @@ The Realme 5 is a mid-range smartphone from Realme. It was announced and release
 
 ## Device picture
 
-![Realme 5](https://fdn2.gsmarena.com/vv/pics/realme/realme-5-rmx1911-2.jpg)
+![Realme 5 Series](https://fdn2.gsmarena.com/vv/pics/realme/realme-5-rmx1911-2.jpg)

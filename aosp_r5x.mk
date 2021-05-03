@@ -22,7 +22,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 # Inherit some common PixelExperience stuff
 $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
-# Inherit from RMX1911 device
+# Inherit from r5x device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
 TARGET_BOOT_ANIMATION_RES := 720
@@ -30,18 +30,18 @@ TARGET_GAPPS_ARCH := arm64
 TARGET_INCLUDE_LIVE_WALLPAPERS := false
 
 PRODUCT_BRAND := Realme
-PRODUCT_DEVICE := RMX1911
+PRODUCT_DEVICE := r5x
 PRODUCT_MANUFACTURER := Realme
-PRODUCT_NAME := aosp_RMX1911
-PRODUCT_MODEL := Realme 5
+PRODUCT_NAME := aosp_r5x
+PRODUCT_MODEL := Realme 5 Series
 
 PRODUCT_GMS_CLIENTID_BASE := android-realme
 
-TARGET_VENDOR_PRODUCT_NAME := RMX1911
-TARGET_VENDOR_DEVICE_NAME := RMX1911
+TARGET_VENDOR_PRODUCT_NAME := r5x
+TARGET_VENDOR_DEVICE_NAME := r5x
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_NAME="RMX1911" \
+    PRODUCT_NAME="r5x" \
     PRIVATE_BUILD_DESC="redfin-user 11 RQ1C.210205.006 7047959 release-keys"
 
 BUILD_FINGERPRINT := google/redfin/redfin:11/RQ1C.210205.006/7047959:user/release-keys

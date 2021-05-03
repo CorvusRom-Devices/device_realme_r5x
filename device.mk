@@ -183,7 +183,7 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1-service.RMX1911
+    android.hardware.biometrics.fingerprint@2.1-service.r5x
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
@@ -273,7 +273,7 @@ PRODUCT_COPY_FILES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.realme_trinket
+    android.hardware.light@2.0-service.realme_r5x
 
 # LiveDisplay native
 PRODUCT_PACKAGES += \
@@ -465,4 +465,4 @@ PRODUCT_BOOT_JARS += \
     WfdCommon
 
 # Inherit the proprietary files
-$(call inherit-product, vendor/realme/RMX1911/RMX1911-vendor.mk)
+$(call inherit-product, vendor/realme/r5x/r5x-vendor.mk)
