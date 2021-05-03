@@ -76,10 +76,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.audio.feature.vbat.enable=true \
     vendor.audio.feature.wsa.enable=false
 
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    audio.sys.noisy.broadcast.delay=600 \
-    audio.sys.offload.pstimeout.secs=3 \
-
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd-ldac \
@@ -94,54 +90,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.bluetooth.wipower=false \
     vendor.qcom.bluetooth.soc=cherokee
 
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    persist.bluetooth.bqr.event_mask=14 \
-    persist.bluetooth.bqr.min_interval_ms=500 \
-    persist.vendor.bt.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac \
-    persist.vendor.bt.a2dp.aac_whitelist=false \
-    persist.vendor.bt.a2dp.hal.implementation=true \
-    persist.vendor.bt.a2dp.mac_whitelist=false \
-    persist.vendor.bt.aac_frm_ctl.enabled=true \
-    persist.vendor.btstack.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac \
-    persist.vendor.btstack.absvolfeature=true \
-    persist.vendor.btstack.enable.splita2dp=true \
-    ro.bluetooth.library_name=libbluetooth_qti.so \
-    vendor.bluetooth.soc=cherokee
-
-# Blur
-PRODUCT_PRODUCT_PROPERTIES += \
-    ro.surface_flinger.supports_background_blur=1 \
-    ro.sf.blurs_are_expensive=1
-
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.camera.expose.aux=1 \
     vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,org.lineageos.snap \
     vidc.enc.dcvs.extra-buff-count=2
-
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    camera.disable_zsl_mode=true \
-    persist.camera.aifb=1 \
-    persist.camera.filter.version=1 \
-    persist.dualcam.lpm.enable=1 \
-    persist.vendor.camera.preview.ubwc=0 \
-    ro.camera.attr.detect.enable=1 \
-    ro.camera.dualcam.type=2 \
-    ro.camera.hfr.enable=1 \
-    ro.camera.relight.enable=0 \
-    ro.camera.sensor.aux2m=1 \
-    ro.camera.temperature.limit=450
-
-# Charger
-PRODUCT_PRODUCT_PROPERTIES += \
-    ro.charger.disable_init_blank=true \
-    ro.charger.enable_suspend=true
-
-# CNE
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    persist.vendor.cne.feature=1 \
-    persist.vendor.dpm.feature=11 \
-    persist.vendor.dpmhalservice.enable=1
 
 # Crypto
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -150,43 +103,38 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Dalvik
 PRODUCT_PROPERTY_OVERRIDES += \
-	dalvik.vm.dex2oat64.enabled=true
+	dalvik.vm.dex2oat64.enabled=true \
+    dalvik.vm.heapgrowthlimit=384m \
+    dalvik.vm.heapmaxfree=8m \
+    dalvik.vm.heapminfree=512k \
+    dalvik.vm.heapsize=448m \
+    dalvik.vm.heapstartsize=4m \
+    dalvik.vm.heaptargetutilization=0.75 \
 
 # Data
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.data.iwlan.enable=true \
-    ro.telephony.iwlan_operation_mode=legacy
-
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    persist.data.df.dev_name=rmnet_usb0 \
     persist.vendor.data.mode=concurrent \
+    ro.telephony.iwlan_operation_mode=legacy \
     ro.vendor.use_data_netmgrd=true
-
-# Dex
-PRODUCT_PRODUCT_PROPERTIES += \
-    ro.sys.fw.dex2oat_thread_count=8
 
 # Display
 PRODUCT_PROPERTY_OVERRIDES += \
-    debug.sf.early_app_phase_offset_ns=1500000 \
-    debug.sf.early_gl_app_phase_offset_ns=15000000 \
-    debug.sf.early_gl_phase_offset_ns=3000000 \
-    debug.sf.early_phase_offset_ns=1500000 \
+    debug.egl.callstack=1 \
+    debug.egl.hw=0 \
+    debug.mdpcomp.logs=0 \
+    debug.sdm.support_writeback=0 \
     debug.sf.disable_backpressure=1 \
     debug.sf.enable_hwc_vds=1 \
     debug.sf.hw=1 \
     debug.sf.latch_unsignaled=1 \
+    persist.sys.sf.color_saturation=1.0 \
     ro.opengles.version=196610 \
-    ro.surface_flinger.force_hwc_copy_for_virtual_displays=true \
-    ro.surface_flinger.max_frame_buffer_acquired_buffers=3 \
-    ro.surface_flinger.max_virtual_display_dimension=4096 \
-    ro.surface_flinger.protected_contents=true \
-    ro.surface_flinger.vsync_event_phase_offset_ns=2000000 \
-    ro.surface_flinger.vsync_sf_event_phase_offset_ns=6000000 \
-    ro.surface_flinger.has_wide_color_display=true \
-    ro.surface_flinger.use_color_management=true \
     ro.vendor.display.cabl=0 \
+    ro.hardware.vulkan=adreno \
+    ro.hardware.egl=adreno \
     vendor.display.disable_skip_validate=1 \
+    vendor.gralloc.disable_ubwc=0 \
     vendor.display.enable_default_color_mode=1 \
     vendor.gralloc.enable_fb_ubwc=1
 
@@ -223,17 +171,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.vidc.enc.disable.pq=true \
     ro.media.recorder-max-base-layer-fps=60
 
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    media.settings.xml=/vendor/etc/media_profiles_vendor.xml \
-    ro.media.recorder-max-base-layer-fps=60
-
-# Netflix
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.netflix.bsp_rev=Q6125-17995-1
-
-# OTG
+# PASR
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.sys.oem.otg_support=true
+    vendor.power.pasr.enabled=true \
+    vendor.pasr.activemode.enabled=true
 
 # Perf
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -259,18 +200,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.radio.sib16_support=1 \
     vendor.rild.libpath=/vendor/lib64/libril-qc-qmi-1.so
 
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    persist.radio.VT_CAM_INTERFACE=1 \
-    persist.vendor.qti.telephony.vt_cam_interface=1 \
-    DEVICE_PROVISIONED=1 \
-    gsm.lte.ca.support=0 \
-    persist.radio.custom_exp_ecc=1 \
-    ril.subscription.types=NV,RUIM \
-    rild.libpath=/system/vendor/lib64/libril-qc-hal-qmi.so \
-    ro.telephony.default_network=22,22 \
-    persist.sys.fflag.override.settings_network_and_internet_v2=true \
-    telephony.lteOnCdmaDevice=1
-
 # Sensor
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.sdk.sensors.gestures=false \
@@ -281,24 +210,28 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.sensors.sta_detect=true \
     ro.vendor.sensors.mot_detect=true
 
+# SurfaceFlinger
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    debug.sf.use_phase_offsets_as_durations=1 \
+    debug.sf.late.sf.duration=10500000 \
+    debug.sf.late.app.duration=20500000 \
+    debug.sf.early.sf.duration=21000000 \
+    debug.sf.early.app.duration=16500000 \
+    debug.sf.earlyGl.sf.duration=13500000 \
+    debug.sf.earlyGl.app.duration=21000000 \
+    ro.surface_flinger.force_hwc_copy_for_virtual_displays=true \
+    ro.surface_flinger.max_frame_buffer_acquired_buffers=3 \
+    ro.surface_flinger.max_virtual_display_dimension=4096 \
+    ro.surface_flinger.protected_contents=true \
+    ro.surface_flinger.use_color_management=true \
+    ro.surface_flinger.has_wide_color_display=true \
+    ro.surface_flinger.has_HDR_display=true \
+    ro.surface_flinger.wcg_composition_dataspace=143261696
+
 # Time
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.delta_time.enable=true
 
-# WFD
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    persist.debug.wfd.enable=1
-
 # Wi-Fi
 PRODUCT_PROPERTY_OVERRIDES += \
     wifi.aware.interface=wifi-aware0
-
-# Zygote
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    persist.device_config.runtime_native.usap_pool_enabled=true
-
-# ZRAM writeback
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.zram.mark_idle_delay_mins=60 \
-    ro.zram.first_wb_delay_mins=180 \
-    ro.zram.periodic_wb_delay_hours=24

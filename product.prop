@@ -1,0 +1,10 @@
+# Blur
+ro.surface_flinger.supports_background_blur=1
+ro.sf.blurs_are_expensive=1
+
+# Dex
+ro.sys.fw.dex2oat_thread_count=8
+
+# LMKD
+ro.config.low_ram=false
+ro.lmk.log_stats=true
