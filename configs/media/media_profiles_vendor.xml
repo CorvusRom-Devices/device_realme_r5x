@@ -35,7 +35,7 @@
 <!ATTLIST Video height CDATA #REQUIRED>
 <!ATTLIST Video frameRate CDATA #REQUIRED>
 <!ELEMENT Audio EMPTY>
-<!ATTLIST Audio codec (amrnb|amrwb|aac) #REQUIRED>
+<!ATTLIST Audio codec (amrnb|amrwb|aac|lpcm) #REQUIRED>
 <!ATTLIST Audio bitRate CDATA #REQUIRED>
 <!ATTLIST Audio sampleRate CDATA #REQUIRED>
 <!ATTLIST Audio channels (1|2|6) #REQUIRED>
@@ -61,7 +61,7 @@
 <!ATTLIST VideoEncoderCap maxHFRFrameHeight CDATA #REQUIRED>
 <!ATTLIST VideoEncoderCap maxHFRMode CDATA #REQUIRED>
 <!ELEMENT AudioEncoderCap EMPTY>
-<!ATTLIST AudioEncoderCap name (amrnb|amrwb|aac|wma) #REQUIRED>
+<!ATTLIST AudioEncoderCap name (amrnb|amrwb|aac|wma|lpcm) #REQUIRED>
 <!ATTLIST AudioEncoderCap enabled (true|false) #REQUIRED>
 <!ATTLIST AudioEncoderCap minBitRate CDATA #REQUIRED>
 <!ATTLIST AudioEncoderCap maxBitRate CDATA #REQUIRED>
@@ -93,7 +93,15 @@
 <MediaSettings>
     <!-- Each camcorder profile defines a set of predefined configuration parameters -->
     <!-- Back Camera -->
+<!-- #ifndef VENDOR_EDIT -->
+<!-- huxin@PSW.MM.MediaServer.Record.1883500, 2019/03/07, -->
+<!-- Modify for avoiding video recording signal tone -->
+<!--
     <CamcorderProfiles cameraId="0">
+-->
+<!-- #else  //VENDOR_EDIT -->
+    <CamcorderProfiles cameraId="0" startOffsetMs="600">
+<!-- #endif //VENDOR_EDIT -->
 
     <EncoderProfile quality="low" fileFormat="3gp" duration="30">
       <Video codec="h264"
@@ -109,11 +117,23 @@
     </EncoderProfile>
 
     <EncoderProfile quality="high" fileFormat="mp4" duration="30">
+<!-- #ifndef VENDOR_EDIT -->
+<!-- HuXin@PSW.MM.MediaServer.CTS.1784928, 2019/02/13, -->
+<!-- Modify for deleting 4K video recording -->
+<!--
       <Video codec="h264"
              bitRate="42000000"
              width="3840"
              height="2160"
              frameRate="30" />
+-->
+<!-- #else  //VENDOR_EDIT -->
+      <Video codec="h264"
+             bitRate="20000000"
+             width="1920"
+             height="1080"
+             frameRate="30" />
+<!-- #endif //VENDOR_EDIT -->
 
       <Audio codec="aac"
              bitRate="156000"
@@ -186,6 +206,36 @@
              channels="2" />
     </EncoderProfile>
 
+<!-- #ifndef VENDOR_EDIT -->
+<!-- HuXin@PSW.MM.MediaServer.CTS.1784928, 2019/02/13, -->
+<!-- Remove for deleting 4K video recording -->
+<!--
+    <EncoderProfile quality="qhd" fileFormat="mp4" duration="30">
+      <Video codec="h264"
+             bitRate="42000000"
+             width="2560"
+             height="1440"
+             frameRate="30" />
+
+      <Audio codec="aac"
+             bitRate="156000"
+             sampleRate="48000"
+             channels="2" />
+    </EncoderProfile>
+
+    <EncoderProfile quality="2k" fileFormat="mp4" duration="30">
+      <Video codec="h264"
+             bitRate="20000000"
+             width="2048"
+             height="1080"
+             frameRate="30" />
+
+      <Audio codec="aac"
+             bitRate="156000"
+             sampleRate="48000"
+             channels="2" />
+    </EncoderProfile>
+
     <EncoderProfile quality="2160p" fileFormat="mp4" duration="30">
       <Video codec="h264"
             bitRate="42000000"
@@ -198,6 +248,8 @@
             sampleRate="48000"
             channels="2" />
     </EncoderProfile>
+-->
+<!-- #endif //VENDOR_EDIT -->
 
     <EncoderProfile quality="qcif" fileFormat="3gp" duration="30">
       <Video codec="h264"
@@ -210,6 +262,19 @@
              bitRate="12200"
              sampleRate="8000"
              channels="1" />
+    </EncoderProfile>
+
+    <EncoderProfile quality="vga" fileFormat="mp4" duration="30">
+      <Video codec="h264"
+             bitRate="2000000"
+             width="640"
+             height="480"
+             frameRate="30" />
+
+      <Audio codec="aac"
+             bitRate="156000"
+             sampleRate="48000"
+             channels="2" />
     </EncoderProfile>
 
     <EncoderProfile quality="timelapselow" fileFormat="mp4" duration="30">
@@ -227,11 +292,23 @@
     </EncoderProfile>
 
     <EncoderProfile quality="timelapsehigh" fileFormat="mp4" duration="30">
+<!-- #ifndef VENDOR_EDIT -->
+<!-- HuXin@PSW.MM.MediaServer.CTS.1784928, 2019/02/13, -->
+<!-- Modify for deleting 4K video recording -->
+<!--
       <Video codec="h264"
              bitRate="42000000"
              width="3840"
              height="2160"
              frameRate="30" />
+-->
+<!-- #else  //VENDOR_EDIT -->
+      <Video codec="h264"
+             bitRate="20000000"
+             width="1920"
+             height="1080"
+             frameRate="30" />
+<!-- #endif //VENDOR_EDIT -->
 
       <!-- audio setting is ignored -->
       <Audio codec="aac"
@@ -274,6 +351,20 @@
              bitRate="512000"
              width="320"
              height="240"
+             frameRate="30" />
+
+      <!-- audio setting is ignored -->
+      <Audio codec="amrnb"
+             bitRate="12200"
+             sampleRate="8000"
+             channels="1" />
+    </EncoderProfile>
+
+    <EncoderProfile quality="timelapsevga" fileFormat="mp4" duration="30">
+      <Video codec="h264"
+             bitRate="2000000"
+             width="640"
+             height="480"
              frameRate="30" />
 
       <!-- audio setting is ignored -->
@@ -325,6 +416,36 @@
              channels="2" />
     </EncoderProfile>
 
+<!-- #ifndef VENDOR_EDIT -->
+<!-- HuXin@PSW.MM.MediaServer.CTS.1784928, 2019/02/13, -->
+<!-- Remove for deleting 4K video recording -->
+<!--
+    <EncoderProfile quality="timelapseqhd" fileFormat="mp4" duration="30">
+      <Video codec="h264"
+             bitRate="42000000"
+             width="2560"
+             height="1440"
+             frameRate="30" />
+
+      <Audio codec="aac"
+             bitRate="156000"
+             sampleRate="48000"
+             channels="2" />
+    </EncoderProfile>
+
+    <EncoderProfile quality="timelapse2k" fileFormat="mp4" duration="30">
+      <Video codec="h264"
+             bitRate="20000000"
+             width="2048"
+             height="1080"
+             frameRate="30" />
+
+      <Audio codec="aac"
+             bitRate="156000"
+             sampleRate="48000"
+             channels="2" />
+    </EncoderProfile>
+
     <EncoderProfile quality="timelapse2160p" fileFormat="mp4" duration="30">
       <Video codec="h264"
             bitRate="42000000"
@@ -337,6 +458,8 @@
             sampleRate="48000"
             channels="2" />
     </EncoderProfile>
+-->
+<!-- #endif //VENDOR_EDIT -->
 
         <ImageEncoding quality="95" />
         <ImageEncoding quality="80" />
@@ -345,7 +468,15 @@
 
     </CamcorderProfiles>
     <!-- Front Camera -->
+<!-- #ifndef VENDOR_EDIT -->
+<!-- huxin@PSW.MM.MediaServer.Record.1883500, 2019/03/07, -->
+<!-- Modify for avoiding video recording signal tone -->
+<!--
     <CamcorderProfiles cameraId="1">
+-->
+<!-- #else  //VENDOR_EDIT -->
+    <CamcorderProfiles cameraId="1" startOffsetMs="600">
+<!-- #endif //VENDOR_EDIT -->
 
     <EncoderProfile quality="low" fileFormat="3gp" duration="30">
       <Video codec="h264"
@@ -360,6 +491,10 @@
              channels="1" />
     </EncoderProfile>
 
+<!-- #ifndef VENDOR_EDIT -->
+<!-- HuXin@PSW.MM.MediaServer.CTS.1784928, 2019/02/13, -->
+<!-- Modify for deleting 4K video recording -->
+<!--
     <EncoderProfile quality="high" fileFormat="mp4" duration="30">
       <Video codec="h264"
              bitRate="20000000"
@@ -372,6 +507,21 @@
              sampleRate="48000"
              channels="2" />
     </EncoderProfile>
+-->
+<!-- #else  //VENDOR_EDIT -->
+    <EncoderProfile quality="high" fileFormat="mp4" duration="30">
+      <Video codec="h264"
+             bitRate="20000000"
+             width="1920"
+             height="1080"
+             frameRate="30" />
+
+      <Audio codec="aac"
+             bitRate="156000"
+             sampleRate="48000"
+             channels="2" />
+    </EncoderProfile>
+<!-- #endif //VENDOR_EDIT -->
 
     <EncoderProfile quality="qvga" fileFormat="mp4" duration="60">
       <Video codec="h264"
@@ -438,6 +588,51 @@
              channels="2" />
     </EncoderProfile>
 
+<!-- #ifndef VENDOR_EDIT -->
+<!-- HuXin@PSW.MM.MediaServer.CTS.1784928, 2019/02/13, -->
+<!-- Remove for deleting 4K video recording -->
+<!--
+    <EncoderProfile quality="qhd" fileFormat="mp4" duration="30">
+      <Video codec="h264"
+             bitRate="42000000"
+             width="2560"
+             height="1440"
+             frameRate="30" />
+
+      <Audio codec="aac"
+             bitRate="156000"
+             sampleRate="48000"
+             channels="2" />
+    </EncoderProfile>
+
+    <EncoderProfile quality="2k" fileFormat="mp4" duration="30">
+      <Video codec="h264"
+             bitRate="20000000"
+             width="2048"
+             height="1080"
+             frameRate="30" />
+
+      <Audio codec="aac"
+             bitRate="156000"
+             sampleRate="48000"
+             channels="2" />
+    </EncoderProfile>
+
+    <EncoderProfile quality="2160p" fileFormat="mp4" duration="30">
+      <Video codec="h264"
+            bitRate="42000000"
+            width="3840"
+            height="2160"
+            frameRate="30" />
+
+      <Audio codec="aac"
+            bitRate="156000"
+            sampleRate="48000"
+            channels="2" />
+    </EncoderProfile>
+-->
+<!-- #endif //VENDOR_EDIT -->
+
     <EncoderProfile quality="qcif" fileFormat="3gp" duration="30">
       <Video codec="h264"
              bitRate="192000"
@@ -449,6 +644,19 @@
              bitRate="12200"
              sampleRate="8000"
              channels="1" />
+    </EncoderProfile>
+
+     <EncoderProfile quality="vga" fileFormat="mp4" duration="30">
+      <Video codec="h264"
+             bitRate="2000000"
+             width="640"
+             height="480"
+             frameRate="30" />
+
+      <Audio codec="aac"
+             bitRate="156000"
+             sampleRate="48000"
+             channels="2" />
     </EncoderProfile>
 
     <!-- TIMELAPSE profiles for front camera -->
@@ -466,6 +674,24 @@
              channels="1" />
     </EncoderProfile>
 
+<!-- #ifndef VENDOR_EDIT -->
+<!-- HuXin@PSW.MM.MediaServer.CTS.1784928, 2019/02/13, -->
+<!-- Modify for deleting 4K video recording -->
+<!--
+    <EncoderProfile quality="timelapsehigh" fileFormat="mp4" duration="30">
+      <Video codec="h264"
+             bitRate="20000000"
+             width="1920"
+             height="1080"
+             frameRate="30" />
+
+      <Audio codec="aac"
+             bitRate="156000"
+             sampleRate="48000"
+             channels="2" />
+    </EncoderProfile>
+-->
+<!-- #else  //VENDOR_EDIT -->
     <EncoderProfile quality="timelapsehigh" fileFormat="mp4" duration="30">
       <Video codec="h264"
              bitRate="20000000"
@@ -479,6 +705,7 @@
              sampleRate="48000"
              channels="2" />
     </EncoderProfile>
+<!-- #endif //VENDOR_EDIT -->
 
     <EncoderProfile quality="timelapseqcif" fileFormat="mp4" duration="30">
       <Video codec="h264"
@@ -513,6 +740,20 @@
              bitRate="512000"
              width="320"
              height="240"
+             frameRate="30" />
+
+      <!-- audio setting is ignored -->
+      <Audio codec="amrnb"
+             bitRate="12200"
+             sampleRate="8000"
+             channels="1" />
+    </EncoderProfile>
+
+    <EncoderProfile quality="timelapsevga" fileFormat="mp4" duration="30">
+      <Video codec="h264"
+             bitRate="2000000"
+             width="640"
+             height="480"
              frameRate="30" />
 
       <!-- audio setting is ignored -->
@@ -635,6 +876,11 @@
         minBitRate="5525" maxBitRate="12200"
         minSampleRate="8000" maxSampleRate="8000"
         minChannels="1" maxChannels="1" />
+
+    <AudioEncoderCap name="lpcm" enabled="true"
+        minBitRate="768000" maxBitRate="4608000"
+        minSampleRate="8000" maxSampleRate="48000"
+        minChannels="1" maxChannels="6" />
 
     <!--
         FIXME:
