@@ -123,7 +123,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.egl.callstack=1 \
     debug.egl.hw=0 \
     debug.mdpcomp.logs=0 \
-    debug.sdm.support_writeback=0 \
     debug.sf.disable_backpressure=1 \
     debug.sf.enable_hwc_vds=1 \
     debug.sf.hw=1 \
