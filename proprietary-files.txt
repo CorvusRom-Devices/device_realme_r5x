@@ -21,13 +21,14 @@ vendor/lib/rfsa/adsp/libhexagon_nn_skel.so|9e9dbfa1b565a6cf93006c1f87d5ee57d173f
 vendor/lib/rfsa/adsp/libsns_device_mode_skel.so|733a5b8861bb6eb1285bb8982992531c94800997
 vendor/lib/rfsa/adsp/libsns_low_lat_stream_skel.so|c30bb30eecf968e02f72c055d3cc13a7f769644f
 
-# Alarm
--product/app/PowerOffAlarm/PowerOffAlarm.apk
-vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service
-vendor/bin/power_off_alarm
-vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc
-vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so
-vendor/lib64/vendor.qti.hardware.alarm@1.0.so
+# Alarm - from ginkgo MIUI 21.3.3 China Beta
+-product/app/PowerOffAlarm/PowerOffAlarm.apk|17b478a5a581e47a87b6a4ff88dc034eb766e35b
+system_ext/framework/vendor.qti.hardware.alarm-V1.0-java.jar|6508f5708221399eb8bd9754dc49bad32a911e27
+vendor/bin/power_off_alarm|8abf232577b12e23abab935d75645999a911fae3
+vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service|53bb2d1e1aae7d7ca7e2381ba1de13002e1c3537
+vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc|a03a9a1c818595b19272ea6ffb466e23a7fc3b05
+vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so|1de476cd56c9a3d31a835ab76855b4681dd4031d
+vendor/lib64/vendor.qti.hardware.alarm@1.0.so|9edcea008c1064c2d255ce36ee88f94b882d3a0d
 
 # ANT+
 -lib/libantradio.so
@@ -2836,12 +2837,20 @@ vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy|f060101b26d3674bb173e5f
 vendor/lib/vendor.qti.hardware.dsp@1.0.so|f4375a7bf2e199ee091dc3b5a75caf0ffab63cda
 vendor/lib64/vendor.qti.hardware.dsp@1.0.so|ef373150851ed97f25d9df47942032fd95071fd3
 
-# FM
-lib64/fm_helium.so
-lib64/libfm-hci.so
-product/lib64/vendor.qti.hardware.fm@1.0.so
-vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so
-vendor/lib64/vendor.qti.hardware.fm@1.0.so
+# FM - from ginkgo MIUI 21.3.3 China Beta
+system_ext/lib/fm_helium.so|0a810beae107546e3c5dba6ff7309c781f079f60
+system_ext/lib/libfm-hci.so|c08c4df1a388ac7bf11a230230cd8e501a0239b9
+system_ext/lib/vendor.qti.hardware.fm@1.0.so|29d1ca940527d8016884517a1a3234bd24005be4
+system_ext/lib64/fm_helium.so|99140db2b53af1b70577507517540e64aff87d7a
+system_ext/lib64/libfm-hci.so|bfca2b2f424921cc5fa7c075bfe1dea2d1b46fec
+system_ext/lib64/vendor.qti.hardware.fm@1.0.so|a91ac4f777a81224e3be78561d29bdaa2838aacd
+vendor/bin/fm_qsoc_patches|5450824b1aec1618edd4fa5c22921c58127c617c
+vendor/etc/init/init.qti.fm.rc|4f5459058debbea76991e69f8522126f6655fd3b
+vendor/etc/init.qti.fm.sh|0ac820dd85ebdf5fa73b5e971f6787ff35ceb65d
+vendor/lib/hw/vendor.qti.hardware.fm@1.0-impl.so|214247ee39c7317c356d374f048363d4fdcb51f2
+vendor/lib/vendor.qti.hardware.fm@1.0.so|2d63f896090e742bc297f4f60274ecd928979964
+vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so|f23a4efc7baa2bcab560e8fda02b9afad3e82d51
+vendor/lib64/vendor.qti.hardware.fm@1.0.so|ee02e7e7a7c474822f575fc76eb3fe6205ffde53
 
 # Fingerprint
 vendor/bin/hw/vendor.oppo.hardware.biometrics.face@1.0-service
@@ -3091,15 +3100,27 @@ vendor/lib64/libkeymasterprovision.so
 vendor/lib64/libkeymasterutils.so
 vendor/lib64/libqtikeymaster4.so
 
-# Listen
-vendor/lib/hw/sound_trigger.primary.trinket.so
-vendor/lib/libadpcmdec.so
-vendor/lib/libgcs-calwrapper.so
-vendor/lib/libgcs-ipc.so
-vendor/lib/libgcs-osal.so
-vendor/lib/libgcs.so
-vendor/lib/liblistensoundmodel2.so
-vendor/lib/libsmwrapper.so
+# Listen - from ginkgo MIUI 21.3.3 China Beta
+vendor/lib/libadpcmdec.so|491fedbdcf9a395340ce4142c277156c0056bcf8
+vendor/lib/libgcs-calwrapper.so|6dd64d5c6acbc69b707a8f0d921098562440341e
+vendor/lib/libgcs-ipc.so|abee9e534d958593455fbe83d3ad2e00b73ca602
+vendor/lib/libgcs-osal.so|db2f22b40cc436be57d90238f533001f6599a56d
+vendor/lib/libgcs.so|27a7cf7fb3f299262f2312e5f752c2a87619365f
+vendor/lib/liblistensoundmodel2.so|4692a7dc271fbec0b54889a02c6cf7b9dbeae454
+vendor/lib64/libgcs-calwrapper.so|cc27355d90ca4f2f52326268da3e1bb5942bdf88
+vendor/lib64/libgcs-ipc.so|863931a493466add57ff2f6e514ee440bbbf68fd
+vendor/lib64/libgcs-osal.so|088226ea3a515e9c5a81415dae7bfb9fc4bba40d
+vendor/lib64/libgcs.so|5dd930ce59f8e18fb8aa5bee5e9cad1d1aa41114
+vendor/lib64/liblistensoundmodel2.so|60178a52023298309311fbcc13a6d8b56f9337e6
+
+# Listen - Hardware - from ginkgo MIUI 21.3.3 China Beta
+vendor/lib/hw/sound_trigger.primary.trinket.so|ae4146f5abf5f9c36705a14bb05687955e8a7c24
+vendor/lib/libcapiv2svacnn.so|da98f2be1e8bd1aba364610063e70c34cab844d2
+vendor/lib/libcapiv2vop.so|b47caa2eeec81e98de03439548d9b9199222eda7
+vendor/lib/libsmwrapper.so|caeb84fd3bf23788aed588656c4f7d8cdc86d480
+vendor/lib64/hw/sound_trigger.primary.trinket.so|b3878d9dbc79749b8b8783769f84e52cbb3f7bb3
+vendor/lib64/libcapiv2svacnn.so|a6b186beee18d45b92e14a8e1411e13e4d9330de
+vendor/lib64/libcapiv2vop.so|3a73591503cd935cb6e2e2175037fde5517c2e91
 
 # Media - from ginkgo MIUI 21.3.3 China Beta
 -vendor/lib/libMpeg4SwEncoder.so|060eb742d882b0a557371520fa6d13d523143ba5
@@ -3213,10 +3234,10 @@ vendor/lib64/vendor.qti.hardware.perf@2.0.so|9c0f9d6f96adc8f36e328322eef43a769b9
 vendor/lib64/vendor.qti.hardware.perf@2.1.so|0c6fca4c71e28609334df3e6e127dea3a44f6542
 vendor/lib64/vendor.qti.hardware.perf@2.2.so|bb8bd79bf358d0a7266faf5b8ff16a7cc6d66e78
 
-# Peripheral manager
-vendor/bin/pm-proxy
-vendor/bin/pm-service
-vendor/lib64/libperipheral_client.so
+# Peripheral manager - from ginkgo MIUI 21.3.3 China Beta
+vendor/bin/pm-proxy|8e159d1fb25f5ee24cf94be8534b3bb8891831bc
+vendor/bin/pm-service|951e322c67132fe8826648e4fda9ddf5e4304e8a
+vendor/lib64/libperipheral_client.so|8cb65f4c93719767048dd7b1b845473fe6074ff7
 
 # Postprocessing - from LA.UM.9.11.r1-02800-NICOBAR.0
 product/etc/permissions/com.qti.snapdragon.sdk.display.xml|4c71d110023088c6ea8072227c714416e2792d75
@@ -3567,22 +3588,18 @@ vendor/lib/libsubsystem_control.so
 vendor/lib64/libSubSystemShutdown.so
 vendor/lib64/libsubsystem_control.so
 
-# Thermal
-vendor/bin/thermal-engine
-vendor/etc/thermal-engine-high.conf
-vendor/etc/thermal-engine-map.conf
-vendor/etc/thermal-engine-nolimits.conf
-vendor/etc/thermal-engine-normal.conf
-vendor/etc/thermal-engine.conf
--vendor/lib64/libthermalclient.so
--vendor/lib/libthermalclient.so
-vendor/lib64/libthermalfeature.so
+# Thermal - from ginkgo MIUI 21.3.3 China Beta
+vendor/bin/thermal-engine|6cd660e2b813896670a14be244d1046afe90064e
+vendor/lib/libthermalclient.so|0aab8039958acdd27af71c5c6923dcd7208f886f
+vendor/lib/libthermalfeature.so|52c35a4e2bc048839e4f9172cc2d299e2367a1fd
+vendor/lib64/libthermalclient.so|ed01fa6caeb9dfbddc0fafc197abe13f3c8b56f9
+vendor/lib64/libthermalfeature.so|f2b78560b6b87c19336ae48ea26d3af756123047
 
-# Time services
--vendor/app/TimeService/TimeService.apk
-vendor/bin/time_daemon
-vendor/etc/init/init.time_daemon.rc
-vendor/lib64/libtime_genoff.so
+# Time services - from ginkgo MIUI 21.3.3 China Beta
+-vendor/app/TimeService/TimeService.apk|7d176a69b270006a511a3c30f544db98a0ccaa37
+vendor/bin/time_daemon|6b5b248cb6c61c42212a15de4e1379d37a5ffc3b
+vendor/etc/init/init.time_daemon.rc|b253ca2a498757e14e1d7a051bf504ae09218f51
+vendor/lib64/libtime_genoff.so|544255c1ca2ee93ec891c1ddbdd019500d257e08
 
 # Touchscreen firmware
 vendor/firmware/tp/19631/ilitek_fw_xl_signed.bin
@@ -3592,10 +3609,11 @@ vendor/firmware/tp/19631/nt_hlt_fw.bin
 vendor/firmware/tp/19631/nt_hlt_fw_signed.bin
 vendor/firmware/tp/19631/RA105A0.bin
 
-# Trusted User Interface
-vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti
-vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc
-vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so
+# TUI (Trusted User Interface) - from ginkgo MIUI 21.3.3 China Beta
+vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti|e8d97981d09a4e34907d13bcbbd10f03572c9218
+vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc|2cfc563d7e1579374f001c94588fae7835a12ffc
+vendor/lib/vendor.qti.hardware.tui_comm@1.0.so|219533843bed533ee5d8f75252ca0784cda9ddc7
+vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so|29d5b12ee8cfabea38074103becdfa76b8e8069d
 
 # WiFi
 vendor/bin/cnss-daemon
