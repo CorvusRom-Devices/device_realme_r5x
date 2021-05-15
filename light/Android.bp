@@ -14,17 +14,18 @@
 // limitations under the License.
 
 cc_binary {
+    relative_install_path: "hw",
     defaults: ["hidl_defaults"],
     name: "android.hardware.light@2.0-service.realme_r5x",
     init_rc: ["android.hardware.light@2.0-service.realme_r5x.rc"],
     vintf_fragments: ["android.hardware.light@2.0-service.realme_r5x.xml"],
     srcs: ["service.cpp", "Light.cpp"],
+    vendor: true,
     shared_libs: [
-        "libbase",
+        "libhardware",
         "libhidlbase",
+        "liblog",
         "libutils",
         "android.hardware.light@2.0",
     ],
-    relative_install_path : "hw",
-    vendor: true,
 }
