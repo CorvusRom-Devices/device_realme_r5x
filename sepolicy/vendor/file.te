@@ -24,3 +24,5 @@ type nv_data_file, file_type, data_file_type, core_data_file_type;
 type modem_efs_partition_device, dev_type;
 
 type sysfs_uio_file, fs_type, sysfs_type;
+
+type sysfs_usb_supply, sysfs_type, fs_type;
