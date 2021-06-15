@@ -506,4 +506,9 @@
 
     <!-- Whether Hearing Aid profile is supported -->
     <bool name="config_hearing_aid_profile_supported">true</bool>
+
+    <!-- Adaptive charging -->
+    <string name="config_adaptiveChargingSysfsNode" translatable="false">/sys/class/power_supply/battery/input_suspend</string>
+    <string name="config_adaptiveChargingSuspendValue" translatable="false">1</string>
+    <string name="config_adaptiveChargingResumeValue" translatable="false">0</string>
 </resources>
