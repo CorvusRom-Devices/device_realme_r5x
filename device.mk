@@ -445,6 +445,9 @@ PRODUCT_PACKAGES += \
     libipanat \
     liboffloadhal
 
+# App Installer
+PRODUCT_ALWAYS_PREOPT_EXTRACTED_APK := true
+
 # Trust
 PRODUCT_PACKAGES += \
     vendor.lineage.trust@1.0-service
