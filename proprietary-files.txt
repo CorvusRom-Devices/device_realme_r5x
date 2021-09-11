@@ -3149,8 +3149,6 @@ vendor/lib/hw/vendor.qti.power.pasrmanager@1.0-impl.so
 vendor/lib64/hw/vendor.qti.power.pasrmanager@1.0-impl.so
 
 # Perf
--system_ext/app/PerformanceMode/PerformanceMode.apk
--system_ext/app/workloadclassifier/workloadclassifier.apk
 system_ext/bin/perfservice
 system_ext/bin/qspmsvc
 system_ext/etc/init/perfservice.rc
