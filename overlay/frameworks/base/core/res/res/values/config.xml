@@ -521,5 +521,7 @@
 
     <!-- Whether to show the Preference for Adaptive connectivity -->
     <bool name="config_show_adaptive_connectivity">false</bool>
-</resources>
 
+    <!-- The max scale for the wallpaper when it's zoomed in -->
+    <item name="config_wallpaperMaxScale" format="float" type="dimen">1</item>
+</resources>
