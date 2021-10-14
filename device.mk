@@ -273,7 +273,8 @@ PRODUCT_PACKAGES += \
     init.target.rc \
     init.perf.rc \
     ueventd.qcom.rc \
-    apex_metadata.rc
+    apex_metadata.rc \
+    fix_ex_sdcard.sh \
 
 # IPv6
 PRODUCT_PACKAGES += \
