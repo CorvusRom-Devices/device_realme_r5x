@@ -100,6 +100,7 @@ PRODUCT_PACKAGES += \
     com.qualcomm.qti.bluetooth_audio@1.0.vendor \
     libbluetooth_qti \
     libbtconfigstore \
+    libldacBT_bco \
     libbthost_if \
     vendor.qti.hardware.bluetooth_audio@2.0 \
     vendor.qti.hardware.bluetooth_audio@2.0.vendor \
