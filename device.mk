@@ -594,5 +594,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     RealmeDirac
 
+# Remove Unwanted Packages
+PRODUCT_PACKAGES += \
+    RemovePackages
+
 # Inherit the proprietary files
 $(call inherit-product, vendor/realme/r5x/r5x-vendor.mk)
