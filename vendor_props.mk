@@ -174,11 +174,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.vidc.enc.disable.pq=true \
     ro.media.recorder-max-base-layer-fps=60
 
-# PASR
-PRODUCT_PROPERTY_OVERRIDES += \
-    vendor.power.pasr.enabled=true \
-    vendor.pasr.activemode.enabled=true
-
 # Perf
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.extension_library=libqti-perfd-client.so \
