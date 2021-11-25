@@ -95,6 +95,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.camera.expose.aux=1 \
     persist.vendor.camera.perflock.enable=0 \
     vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,org.lineageos.snap \
+    persist.vendor.camera.perflock.enable=0 \
     vidc.enc.dcvs.extra-buff-count=2
 
 # Crypto
