@@ -78,3 +78,6 @@ ro.logdumpd.enabled                  u:object_r:oppo_debug_prop:s0
 
 persist.radio.is_vonr_enabled_1      u:object_r:radio_prop:s0
 persist.radio.is_vonr_enabled_0      u:object_r:radio_prop:s0
+
+# FM
+ro.vendor.fm.use_audio_session		u:object_r:exported_system_prop:s0
