@@ -379,7 +379,7 @@
     <ctl name="COMP8 Switch" value="0" />
 
     <!-- Headphone class-H mode -->
-    <ctl name="RX_HPH_PWR_MODE" value="ULP" />
+    <ctl name="RX_HPH_PWR_MODE" value="LOHIFI" />
     <ctl name="RX HPH Mode" value="CLS_H_ULP" />
 
     <!-- IIR/voice anc -->
