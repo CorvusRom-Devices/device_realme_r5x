@@ -548,10 +548,12 @@
 
     <path name="deep-buffer-playback">
         <ctl name="RX_CDC_DMA_RX_0 Audio Mixer MultiMedia1" value="1" />
+        <ctl name="RX_CDC_DMA_RX_0 Format" value="S32_LE" />
     </path>
 
     <path name="deep-buffer-playback handset">
         <ctl name="RX_CDC_DMA_RX_0 Audio Mixer MultiMedia1" value="1" />
+        <ctl name="RX_CDC_DMA_RX_0 Format" value="S32_LE" />
     </path>
 
     <path name="deep-buffer-playback speaker-protected">
@@ -609,6 +611,7 @@
 
     <path name="deep-buffer-playback headphones">
         <ctl name="RX_CDC_DMA_RX_0 Audio Mixer MultiMedia1" value="1" />
+        <ctl name="RX_CDC_DMA_RX_0 Format" value="S32_LE" />
     </path>
 
     <path name="deep-buffer-playback speaker-and-headphones">
