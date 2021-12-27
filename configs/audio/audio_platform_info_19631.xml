@@ -25,9 +25,6 @@
 <!-- OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN -->
 <!-- IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.                          -->
 <audio_platform_info>
-    <bit_width_configs>
-        <device name="SND_DEVICE_OUT_SPEAKER" bit_width="24"/>
-    </bit_width_configs>
     <interface_names>
         <device name="AUDIO_DEVICE_IN_BUILTIN_MIC" interface="TX_CDC_DMA_TX_3" codec_type="internal"/>
         <device name="AUDIO_DEVICE_IN_BACK_MIC" interface="TX_CDC_DMA_TX_3" codec_type="internal"/>
@@ -75,7 +72,7 @@
         <param key="mono_speaker" value="right"/>
         <param key="spkr_1_tz_name" value="wsatz.11"/>
         <param key="true_32_bit" value="true"/>
-        <param key="native_audio_mode" value="true"/>
+        <param key="native_audio_mode" value="src"/>
         <param key="hfp_pcm_dev_id" value="39"/>
         <!--#Zhao.Pan@PSW.MM.AudioDriver.HAL, 2020/02/19, only 1 mic, change to 1 -->
         <param key="input_mic_max_count" value="1"/>
@@ -114,7 +111,8 @@
         <device name="SND_DEVICE_IN_VOCE_RECOG_USB_HEADSET_HEX_MIC" acdb_id="162"/>
         <device name="SND_DEVICE_IN_HANDSET_GENERIC_QMIC" acdb_id="157"/>
         <!-- Gong.Chen@ODM_WT.MM.Audiodriver.HAL.1919324, 2019/04/30, Add for acdbid -->
-        <device name="SND_DEVICE_OUT_VOICE_HEADPHONES" acdb_id="9"/>
+        <device name="SND_DEVICE_OUT_VOICE_HEADPHONES" acdb_id="0"/>
+        <device name="SND_DEVICE_OUT_HEADPHONES" acdb_id="0"/>
         <device name="SND_DEVICE_IN_HEADSET_MIC" acdb_id="23"/>
         <device name="SND_DEVICE_IN_VOICE_REC_HEADSET_MIC" acdb_id="23"/>
         <device name="SND_DEVICE_IN_HANDSET_MIC_LOWLATENCY" acdb_id="81"/>
