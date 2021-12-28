@@ -2,12 +2,12 @@
     {
         "repository":   "kernel_realme_r5x",
         "target_path":  "kernel/realme/r5x",
-        "branch":       "eleven"
+        "branch":       "twelve"
     },
     {
         "repository":   "vendor_realme_r5x",
         "target_path":  "vendor/realme/r5x",
-        "branch":       "eleven",
+        "branch":       "twelve",
         "remote":       "pixel-devices-blobs"
     }
 ]
