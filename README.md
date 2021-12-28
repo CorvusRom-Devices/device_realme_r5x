@@ -1,6 +1,6 @@
-# Device Tree for Realme 5, Realme 5s, Realme 5i
+# Unified OSS Device Tree for Realme 5, Realme 5s, Realme 5i & Realme 5 NFC
 
-The Realme 5, Realme 5s, Realme 5i are mid-range smartphones from Realme. These are announced and released in August 2019, November 2019,January 2020.
+The Realme 5, Realme 5s, Realme 5i, Realme 5 NFC are mid-range smartphones from Realme. These are announced and released in August 2019, November 2019,January 2020.
 
 ## Device specifications
 
