@@ -259,7 +259,7 @@
                 <string ...>M -5,0 L -5,10 L 5,10 L 5,0 Z @dp</string>
          @see https://www.w3.org/TR/SVG/paths.html#PathData
     -->
-     <string name="config_mainBuiltInDisplayCutout">M -38,0 L -38,56 L 38,56 L 38,0 Z</string>
+     <string name="config_mainBuiltInDisplayCutout">M -38,0 L -38,64 L 38,64 L 38,0 Z</string>
 
     <!-- Whether the always on display mode is available. -->
     <bool name="config_dozeAlwaysOnDisplayAvailable">true</bool>
