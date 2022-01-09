@@ -39,6 +39,10 @@ PRODUCT_SOONG_NAMESPACES += \
 # Vendor properties
 -include $(LOCAL_PATH)/vendor_props.mk
 
+# APN
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/apns-conf.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/apns-conf.xml
+
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio@5.0-impl \
