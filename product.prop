@@ -1,5 +1,5 @@
 # Blur
-ro.surface_flinger.supports_background_blur=0
+ro.surface_flinger.supports_background_blur=1
 
 # Dex
 ro.sys.fw.dex2oat_thread_count=8
