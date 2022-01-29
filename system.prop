@@ -26,6 +26,7 @@ ro.camera.hfr.enable=1
 ro.camera.relight.enable=0
 ro.camera.sensor.aux2m=1
 ro.camera.temperature.limit=450
+persist.camera.managebuffer.enable=1
 
 # Charger
 ro.charger.disable_init_blank=true
