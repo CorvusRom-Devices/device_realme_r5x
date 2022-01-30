@@ -3046,6 +3046,12 @@ vendor/lib64/libsdm-disp-vndapis.so|4fbf76da3a9eb5d227f948521bd4c80842446bb4
 vendor/lib64/libsdmextension.so|6c61406a6680d967da398bc7881d2c23cb8e27a7
 vendor/lib64/libtinyxml2_1.so|ff32deb110acb02cb5def5f3404f9064c1276483
 
+# Health
+vendor/bin/hw/android.hardware.health@2.0-service
+vendor/bin/hw/android.hardware.health@2.0-service.oppo
+vendor/etc/init/android.hardware.health@2.0-service.rc
+vendor/etc/init/android.hardware.health@2.0-service.oppo.rc
+
 # IPA
 vendor/firmware/ipa_fws.b00
 vendor/firmware/ipa_fws.b01
