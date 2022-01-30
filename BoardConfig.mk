@@ -41,6 +41,7 @@ TARGET_SCREEN_WIDTH := 720
 
 # Display
 TARGET_SCREEN_DENSITY := 320
+BOARD_USES_ADRENO := true
 
 # Android Verified Boot
 BOARD_AVB_ENABLE := true
