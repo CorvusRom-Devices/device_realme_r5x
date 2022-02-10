@@ -53,4 +53,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
          does not work well, particularly with noisy touchscreens. Note that disabling it may
          increase the rate of unintentional unlocks. -->
     <bool name="config_lockscreenAntiFalsingClassifierEnabled">false</bool>
+
+    <!-- Unify back gesture vibration with system wide haptics -->
+    <bool name="config_vibrateOnIconAnimation">true</bool>
 </resources>
