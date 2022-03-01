@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "android.hardware.power@-service.pixel-libperfmgr"
+#define LOG_TAG "android.hardware.power@-service.r5x-libperfmgr"
 
 #include <errno.h>
 #include <unistd.h>
