@@ -442,6 +442,10 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.stepcounter.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.stepcounter.xml \
     frameworks/native/data/etc/android.hardware.sensor.stepdetector.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.stepdetector.xml
 
+# Storage HAL
+PRODUCT_PACKAGES += \
+    android.hardware.health.storage@1.0-service
+
 # Tethering
 PRODUCT_PACKAGES += \
     TetheringConfigOverlay
