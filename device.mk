@@ -555,8 +555,6 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth.a2dp@1.0.vendor \
     android.hardware.bluetooth.audio@2.0.vendor \
     android.hardware.bluetooth@1.1.vendor \
-    android.hardware.boot@1.0.vendor \
-    android.hardware.boot@1.1.vendor \
     android.hardware.broadcastradio@2.0.vendor \
     android.hardware.camera.common@1.0.vendor \
     android.hardware.camera.device@3.6.vendor \
@@ -569,8 +567,6 @@ PRODUCT_PACKAGES += \
     android.hardware.contexthub@1.0.vendor \
     android.hardware.contexthub@1.1.vendor \
     android.hardware.drm@1.3.vendor \
-    android.hardware.dumpstate@1.0.vendor \
-    android.hardware.dumpstate@1.1.vendor \
     android.hardware.fastboot@1.0.vendor \
     android.hardware.gatekeeper@1.0.vendor \
     android.hardware.gnss.measurement_corrections@1.1.vendor \
@@ -582,7 +578,6 @@ PRODUCT_PACKAGES += \
     android.hardware.health@2.1.vendor \
     android.hardware.input.classifier@1.0.vendor \
     android.hardware.input.common@1.0.vendor \
-    android.hardware.ir@1.0.vendor \
     android.hardware.keymaster@4.1.vendor \
     android.hardware.light@2.0.vendor \
     android.hardware.media.bufferpool@1.0.vendor \
@@ -601,13 +596,9 @@ PRODUCT_PACKAGES += \
     android.hardware.tetheroffload.config@1.0.vendor \
     android.hardware.tetheroffload.control@1.0.vendor \
     android.hardware.thermal@2.0.vendor \
-    android.hardware.tv.cec@2.0.vendor \
-    android.hardware.tv.tuner@1.0.vendor \
     android.hardware.usb.gadget@1.1.vendor \
     android.hardware.usb@1.2.vendor \
     android.hardware.vibrator@1.3.vendor \
-    android.hardware.vr@1.0.vendor \
-    android.hardware.weaver@1.0.vendor \
     android.hardware.wifi.hostapd@1.2.vendor \
     android.hardware.wifi.offload@1.0.vendor \
     android.hardware.wifi.supplicant@1.3.vendor \
@@ -615,7 +606,6 @@ PRODUCT_PACKAGES += \
     android.hidl.allocator@1.0.vendor \
     android.hidl.memory.block@1.0.vendor \
     android.system.net.netd@1.1.vendor \
-    android.system.wifi.keystore@1.0.vendor \
     libadf.vendor \
     libstdc++.vendor \
     vendor.qti.hardware.camera.device@1.0.vendor \
