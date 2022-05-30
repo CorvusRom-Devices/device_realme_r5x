@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.kharame.kharamedirac;
+package com.realme.dirac;
 
 import android.media.audiofx.AudioEffect;
 

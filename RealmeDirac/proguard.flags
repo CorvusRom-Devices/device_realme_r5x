@@ -4,6 +4,6 @@
 
 -keep class ** extends android.support.v14.preference.PreferenceFragment
 
--keep class com.kharame.kharamedirac.* {
+-keep class com.realme.dirac.* {
   *;
 }
