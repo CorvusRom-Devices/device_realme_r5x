@@ -36,7 +36,8 @@ PRODUCT_SOONG_NAMESPACES += \
     packages/apps/Bluetooth \
     hardware/google/interfaces \
     vendor/qcom/opensource/commonsys-intf/display \
-    vendor/qcom/opensource/wfd-commonsys
+    vendor/qcom/opensource/wfd-commonsys \
+    vendor/nxp/opensource/pn5xx
 
 # Vendor properties
 -include $(LOCAL_PATH)/vendor_props.mk
