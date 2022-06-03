@@ -68,6 +68,18 @@ void init_fp_properties()
     }
 }
 
+void init_sku_device()
+{
+    std::string sku_prop = GetProperty("ro.boot.product.hardware.sku", "");
+    if (sku_prop == "nfc_ese")
+    {
+        property_override("ro.boot.product.hardware.sku", "RMX1927");
+        property_override("ro.hardware.nfc_nci", "nqx.default");
+        property_override("ro.nfc.port", "I2C");
+    }
+}
+
 void vendor_load_properties() {
     init_fp_properties();
+    init_sku_device();
 }
