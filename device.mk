@@ -515,23 +515,7 @@ PRODUCT_PACKAGES += \
     WfdCommon
 
 PRODUCT_PACKAGES += \
-    android.frameworks.automotive.display@1.0.vendor \
-    android.frameworks.cameraservice.common@2.0.vendor \
-    android.frameworks.cameraservice.device@2.0.vendor \
-    android.frameworks.cameraservice.service@2.1.vendor \
     android.frameworks.displayservice@1.0.vendor \
-    android.frameworks.schedulerservice@1.0.vendor \
-    android.frameworks.serservice@1.0.vendor \
-    android.frameworks.stats@1.0.vendor \
-    android.hardware.atrace@1.0.vendor \
-    android.hardware.audio.effect@6.0.vendor \
-    android.hardware.audio@6.0.vendor \
-    android.hardware.authsecret@1.0.vendor \
-    android.hardware.automotive.audiocontrol@2.0.vendor \
-    android.hardware.automotive.can@1.0.vendor \
-    android.hardware.automotive.evs@1.1.vendor \
-    android.hardware.automotive.sv@1.0.vendor \
-    android.hardware.automotive.vehicle@2.0.vendor \
     android.hardware.biometrics.face@1.0.vendor \
     android.hardware.biometrics.fingerprint@2.2.vendor \
     android.hardware.bluetooth.a2dp@1.0.vendor \
@@ -542,24 +526,14 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.device@3.6.vendor \
     android.hardware.camera.metadata@3.5.vendor \
     android.hardware.camera.provider@2.6.vendor \
-    android.hardware.cas.native@1.0.vendor \
-    android.hardware.cas@1.2.vendor \
     android.hardware.common-V1-ndk_platform.vendor \
-    android.hardware.confirmationui@1.0.vendor \
-    android.hardware.contexthub@1.0.vendor \
-    android.hardware.contexthub@1.1.vendor \
     android.hardware.drm@1.3.vendor \
     android.hardware.fastboot@1.0.vendor \
     android.hardware.gatekeeper@1.0.vendor \
-    android.hardware.gnss.measurement_corrections@1.1.vendor \
-    android.hardware.gnss.visibility_control@1.0.vendor \
     android.hardware.gnss@2.1.vendor \
     android.hardware.graphics.common-V1-ndk_platform.vendor \
     android.hardware.graphics.composer@2.4.vendor \
-    android.hardware.health.storage@1.0.vendor \
     android.hardware.health@2.1.vendor \
-    android.hardware.input.classifier@1.0.vendor \
-    android.hardware.input.common@1.0.vendor \
     android.hardware.keymaster@4.1.vendor \
     android.hardware.light@2.0.vendor \
     android.hardware.media.bufferpool@1.0.vendor \
@@ -567,17 +541,11 @@ PRODUCT_PACKAGES += \
     android.hardware.neuralnetworks@1.3.vendor \
     android.hardware.nfc@1.2.vendor \
     android.hardware.oemlock@1.0.vendor \
-    android.hardware.power.stats@1.0.vendor \
-    android.hardware.power@1.3.vendor \
     android.hardware.radio.config@1.2.vendor \
     android.hardware.radio.deprecated@1.0.vendor \
     android.hardware.radio@1.5.vendor \
     android.hardware.secure_element@1.2.vendor \
-    android.hardware.sers@2.1.vendor \
     android.hardwareundtrigger@2.3.vendor \
-    android.hardware.tetheroffload.config@1.0.vendor \
-    android.hardware.tetheroffload.control@1.0.vendor \
-    android.hardware.thermal@2.0.vendor \
     android.hardware.usb.gadget@1.1.vendor \
     android.hardware.usb@1.2.vendor \
     android.hardware.vibrator@1.3.vendor \
@@ -586,11 +554,8 @@ PRODUCT_PACKAGES += \
     android.hardware.wifi.supplicant@1.3.vendor \
     android.hardware.wifi@1.4.vendor \
     android.hidl.allocator@1.0.vendor \
-    android.hidl.memory.block@1.0.vendor \
     android.system.net.netd@1.1.vendor \
     libadf.vendor \
-    libstdc++.vendor \
-    vendor.qti.hardware.camera.device@1.0.vendor \
     libtinyxml.vendor
 
 # Google Photos
