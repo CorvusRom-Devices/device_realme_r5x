@@ -102,4 +102,12 @@
             <instance>oppo_slot2</instance>
         </interface>
     </hal>
+    <hal format="hidl" optional="true"> 
+        <name>vendor.egistec.hardware.fingerprint</name> 
+        <version>4.0</version> 
+        <interface>
+            <name>IBiometricsFingerprintEts</name> 
+            <instance>default</instance>
+        </interface>
+     </hal> 
 </compatibility-matrix>
