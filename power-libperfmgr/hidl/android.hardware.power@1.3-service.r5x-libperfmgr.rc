@@ -21,6 +21,6 @@ on property:init.svc.vendor.camera-provider-2-4=restarting && property:vendor.po
     restart vendor.power-hal-1-3
 
 # restart powerHAL when audioHAL died
-on property:init.svc.vendor.audio-hal-2-0=restarting && property:vendor.powerhal.audio=AUDIO_LOW_LATENCY
+on property:init.svc.vendor.audio-hal=restarting && property:vendor.powerhal.audio=AUDIO_LOW_LATENCY
     setprop vendor.powerhal.audio ""
     restart vendor.power-hal-1-3
