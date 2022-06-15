@@ -44,7 +44,7 @@ ro.vendor.qti.va_odm.support=1
 
 # Graphics
 debug.sf.disable_hwc_vds=1
-persist.hwc.enable_vds=1
+debug.sdm.support_writeback=0
 debug.cpurend.vsync=false
 
 # Force triple frame buffers
