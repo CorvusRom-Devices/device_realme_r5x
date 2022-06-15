@@ -2,6 +2,15 @@
 audio.sys.noisy.broadcast.delay=600
 audio.sys.offload.pstimeout.secs=3
 
+# Battery
+pm.sleep_mode=1 power.saving.mode=1 
+ro.config.hw_power_saving=1 
+ro.ril.disable.power.collapse=1
+persist.vendor.radio.add_power_save=1
+ro.ril.fast.dormancy.rule=1
+ro.ril.fast.dormancy.timeout=3
+ro.mot.eri.losalert.delay=1000
+
 # Bluetooth
 persist.bluetooth.bqr.event_mask=14
 persist.bluetooth.bqr.min_interval_ms=500
