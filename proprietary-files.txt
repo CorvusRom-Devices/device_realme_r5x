@@ -3134,6 +3134,24 @@ vendor/lib64/vendor.qti.hardware.vpp@1.1.so|dcb6014f2823634fcece391e97f0fa800eff
 vendor/lib64/vendor.qti.hardware.vpp@1.2.so|7b52d9cb6ccc2c4bb5b76d5c69f37fddf7408d11
 vendor/lib64/vendor.qti.hardware.vpp@1.3.so|9243e5231bd684db5874334e2c5b10b2432aed00
 
+# NFC (Configs)
+vendor/etc/sn100u_bootup.pnscr
+vendor/etc/sn100u_ese_disableIso.pnscr
+vendor/etc/sn100u_ese_disableIsoRead.pnscr
+vendor/etc/sn100u_nfcon.pnscr
+vendor/etc/sn100u_pnx_chr.pnscr
+vendor/etc/sn100u_pnx_cui.pnscr
+vendor/etc/sn100u_pnx_ese_3.pnscr
+vendor/etc/sn100u_pnx_ese_aclog.pnscr
+vendor/etc/sn100u_pnx_ese_cplc.pnscr
+vendor/etc/sn100u_pnx_ese_fabkey.pnscr
+vendor/etc/sn100u_pnx_ese_free.pnscr
+vendor/etc/sn100u_pnx_ese_keyset.pnscr
+vendor/etc/sn100u_pnx_ese_sn.pnscr
+vendor/etc/sn100u_pnx_ndi.pnscr
+vendor/etc/sn100u_pnx_pcv.pnscr
+vendor/etc/sn100u_pnx_sst.pnscr
+
 # Peripheral manager - from LA.UM.9.11.r1-03900-NICOBAR.0
 vendor/bin/pm-proxy|6ab1401348bdfce25ad74396c7dbf62ccae1dfdf
 vendor/bin/pm-service|951e322c67132fe8826648e4fda9ddf5e4304e8a

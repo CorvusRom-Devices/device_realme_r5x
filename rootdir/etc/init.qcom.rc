@@ -1160,3 +1160,14 @@ service vendor.hwcomposer-2-4 /vendor/bin/hw/android.hardware.graphics.composer@
     onrestart restart surfaceflinger
     writepid /dev/cpuset/system-background/tasks
     socket pps stream 0660 system system
+
+# NFC
+service vendor.nfc_hal_service /vendor/bin/hw/android.hardware.nfc@1.2-service
+    override
+    class hal
+    user nfc
+    group nfc
+    disabled
+
+on property:ro.boot.product.hardware.sku=r5x
+    start vendor.nfc_hal_service
