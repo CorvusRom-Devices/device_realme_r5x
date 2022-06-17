@@ -28,7 +28,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.audio_hal.in_period_size=144 \
     vendor.audio_hal.period_multiplier=3 \
     vendor.audio_hal.period_size=240 \
-    vendor.voice.path.for.pcm.voip=true
+    vendor.voice.path.for.pcm.voip=true \
+    persist.vendor.btstack.enable.twsplus=true \
+    persist.vendor.btstack.enable.twsplussho=true
 
 PRODUCT_PROPERTY_OVERRIDES += \
     vendor.audio.feature.a2dp_offload.enable=false \
