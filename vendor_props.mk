@@ -243,6 +243,11 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.delta_time.enable=true
 
+# System
+PRODUCT_DEXPREOPT_SPEED_APPS += \
+    Settings \
+    SystemUI
+
 # Usb
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.vendor.usb.config.extra=none \
