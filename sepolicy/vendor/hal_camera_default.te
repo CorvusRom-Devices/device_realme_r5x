@@ -11,14 +11,24 @@ allow hal_camera_default proc_devinfo:dir { search };
 allow hal_camera_default proc_devinfo:file { read open };
 allow hal_camera_default sysfs_hal_camera_default:file { read open };
 allow hal_camera_default sysfs_camera:file { read open };
-
+allow hal_camera_default vndbinder_device:chr_file { ioctl  map  open  read  write };
+allow hal_camera_default vendor_default_prop:property_service { set };
+allow hal_camera_default vendor_data_file:file { create  getattr  open  write };
+allow hal_camera_default vendor_data_file:dir { add_name  write };
+allow hal_camera_default system_prop:file { getattr  map  open  read };
+allow hal_camera_default sysfs:file { getattr  open  read };
+allow hal_camera_default property_socket:sock_file { write };
+allow hal_camera_default proc:file { getattr  open  read };
+allow hal_camera_default mnt_vendor_file:file { append  create  getattr  open  read  setattr };
+allow hal_camera_default mnt_vendor_file:dir { add_name  write };
+allow hal_camera_default init:unix_stream_socket { connectto };
+allow hal_camera_default device:chr_file { ioctl  open  read };
+allow hal_camera_default default_prop:property_service { set };
+allow hal_camera_default default_prop:file { getattr  map  open  read };
 get_prop(hal_camera_default, vendor_camera_prop)
 get_prop(hal_camera_default, oppo_debug_prop)
 get_prop(hal_camera_default, bootanim_system_prop)
-
 r_dir_file(hal_camera_default, proc_oppoversion);
 r_dir_file(hal_camera_default, sysfs_net)
-
 set_prop(hal_camera_default, vendor_camera_prop)
-
 dontaudit hal_camera_default radio_prop:file read;
