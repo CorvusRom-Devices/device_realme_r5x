@@ -168,6 +168,9 @@ DEVICE_MATRIX_FILE := $(DEVICE_PATH)/configs/manifests/compatibility_matrix.xml
 ODM_MANIFEST_SKUS += RMX1927
 ODM_MANIFEST_RMX1927_FILES := $(DEVICE_PATH)/configs/manifests/manifest_RMX1927.xml
 
+# HWUI
+HWUI_COMPILE_FOR_PERF := true
+
 # Keystore
 TARGET_PROVIDES_KEYMASTER := true
 
