@@ -182,7 +182,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Perf
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.extension_library=libqti-perfd-client.so \
-    ro.vendor.perf.scroll_opt=true
+    ro.vendor.perf.scroll_opt=true \
+    sys.fflag.override.settings_enable_monitor_phantom_procs=false
 
 # Radio
 PRODUCT_PROPERTY_OVERRIDES += \
