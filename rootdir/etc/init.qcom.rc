@@ -260,6 +260,9 @@ on boot
     # OTG
     write /sys/class/power_supply/usb/otg_switch 1
 
+    # USB Fast Charge
+    write /sys/kernel/fast_charge/force_fast_charge 1
+
     # Touchpanel
     write /proc/touchpanel/double_tap_enable 1
 
