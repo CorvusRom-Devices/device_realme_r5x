@@ -161,8 +161,8 @@ LOC_HIDL_VERSION := 4.0
 # HIDL
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/configs/manifests/manifest.xml
 DEVICE_MATRIX_FILE := $(DEVICE_PATH)/configs/manifests/compatibility_matrix.xml
-ODM_MANIFEST_SKUS += RMX1927
-ODM_MANIFEST_RMX1927_FILES := $(DEVICE_PATH)/configs/manifests/manifest_RMX1927.xml
+ODM_MANIFEST_SKUS += nfc
+ODM_MANIFEST_NFC_FILES := $(DEVICE_PATH)/configs/manifests/manifest_nfc.xml
 
 # HWUI
 HWUI_COMPILE_FOR_PERF := true
