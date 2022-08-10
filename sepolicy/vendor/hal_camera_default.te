@@ -25,6 +25,7 @@ allow hal_camera_default init:unix_stream_socket { connectto };
 allow hal_camera_default device:chr_file { ioctl  open  read };
 allow hal_camera_default default_prop:property_service { set };
 allow hal_camera_default default_prop:file { getattr  map  open  read };
+allow hal_camera_default public_adsprpcd_file:file r_file_perms;
 get_prop(hal_camera_default, vendor_camera_prop)
 get_prop(hal_camera_default, oppo_debug_prop)
 get_prop(hal_camera_default, bootanim_system_prop)
