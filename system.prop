@@ -73,6 +73,7 @@ iorapd.readahead.enable=false
 debug.cpurend.vsync=false
 
 # Media
+media.settings.xml=/vendor/etc/media_profiles_vendor.xml
 debug.stagefright.ccodec=1
 debug.stagefright.omx_default_rank=0
 debug.stagefright.omx_default_rank.sw-audio=1
