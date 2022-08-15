@@ -138,7 +138,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.display.enable_default_color_mode=1 \
     vendor.gralloc.enable_fb_ubwc=1 \
     debug.hwui.use_hint_manager=true \
-    debug.hwui.target_cpu_time_percent=30
+    debug.hwui.target_cpu_time_percent=30 \
+    debug.hwui.use_buffer_age=false
 
 # DRM
 PRODUCT_PROPERTY_OVERRIDES += \
