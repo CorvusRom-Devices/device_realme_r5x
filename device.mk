@@ -58,7 +58,6 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.effect@2.0-service \
     android.hardware.soundtrigger@2.1-impl \
     android.hardware.audio.service \
-    audio.a2dp.default \
     audio.primary.trinket \
     audio.r_submix.default \
     audio.usb.default \
