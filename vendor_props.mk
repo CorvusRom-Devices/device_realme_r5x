@@ -139,7 +139,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.gralloc.enable_fb_ubwc=1 \
     debug.hwui.use_hint_manager=true \
     debug.hwui.target_cpu_time_percent=30 \
-    debug.hwui.use_buffer_age=false
+    debug.hwui.use_buffer_age=false \
+    vendor.display.enable_force_split=1
 
 # DRM
 PRODUCT_PROPERTY_OVERRIDES += \
