@@ -142,7 +142,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.hwui.use_hint_manager=true \
     debug.hwui.target_cpu_time_percent=30 \
     debug.hwui.use_buffer_age=false \
-    vendor.display.enable_force_split=1
+    vendor.display.enable_force_split=1 \
+    dev.pm.dyn_samplingrate=1
 
 # DRM
 PRODUCT_PROPERTY_OVERRIDES += \
