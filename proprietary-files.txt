@@ -2749,20 +2749,16 @@ vendor/lib64/vendor.qti.hardware.fm@1.0.so|eafe7c9254077253ad9512fa5622948954769
 vendor/bin/hw/vendor.oppo.hardware.biometrics.fingerprint@2.1-service
 vendor/etc/init/vendor.oppo.hardware.biometrics.fingerprint@2.1-service.rc
 vendor/lib/libalipay_factory.so
-vendor/lib/libhypnusclient.so
 vendor/lib/librpmbengclient.so
 vendor/lib/vendor.oppo.hardware.commondcs@1.0.so
-vendor/lib/vendor.oppo.hardware.hypnus@1.0.so
 vendor/lib/vendor.qti.hardware.fingerprint@1.0.so
 vendor/lib64/android.frameworks.fingerprintservice@1.0.so
 vendor/lib64/libalipay_factory.so
-vendor/lib64/libhypnusclient.so
 vendor/lib64/librpmbengclient.so
 vendor/lib64/libRbsFlow.so
 vendor/lib64/vendor.egistec.hardware.fingerprint@4.0.so
 vendor/lib64/vendor.oppo.hardware.biometrics.fingerprint@2.1.so
 vendor/lib64/vendor.oppo.hardware.commondcs@1.0.so
-vendor/lib64/vendor.oppo.hardware.hypnus@1.0.so
 vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so
 vendor/lib64/hw/libets_teeclient_v2.so
 
@@ -2975,6 +2971,12 @@ vendor/lib64/libtinyxml2_1.so|ff32deb110acb02cb5def5f3404f9064c1276483
 # Health
 vendor/bin/hw/android.hardware.health@2.0-service.oppo
 vendor/etc/init/android.hardware.health@2.0-service.oppo.rc
+
+# Hypnus
+vendor/lib/libhypnusclient.so
+vendor/lib/vendor.oppo.hardware.hypnus@1.0.so
+vendor/lib64/libhypnusclient.so
+vendor/lib64/vendor.oppo.hardware.hypnus@1.0.so
 
 # IPA
 vendor/firmware/ipa_fws.b00
