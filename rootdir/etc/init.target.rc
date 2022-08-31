@@ -505,6 +505,9 @@ service oppoalgo_daemon /vendor/bin/oppoalgo_daemon
 on property:sys.boot_completed=1
     start oppoalgo_daemon
 
+on property:ro.boot.hwversion=*
+    setprop vendor.boot.hwversion ${ro.boot.hwversion}
+
 # SMART CHARGING
     chown system system /sys/class/power_supply/battery/input_suspend
     chmod 0666 /sys/class/power_supply/battery/input_suspend
