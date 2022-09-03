@@ -8,11 +8,14 @@ cc_library_static {
     name: "libinit_r5x",
     recovery_available: true,
     srcs: ["init_r5x.cpp"],
-    whole_static_libs: ["libbase"],
     header_libs: [
         "libbase_headers",
     ],
     include_dirs: [
         "system/core/init"
-    ]
+    ],
+    shared_libs: [
+        "libbase",
+        "libfs_mgr",
+    ],
 }
