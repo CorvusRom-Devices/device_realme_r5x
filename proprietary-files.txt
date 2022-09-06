@@ -3475,6 +3475,7 @@ system_ext/lib/libmmosal.so|ed23994b5e148fe143a320a2b183b71a556e2fcd
 system_ext/lib/libmmparser_lite.so|078224d83480b7f69eb30e0d036e24fa3fb0e37a
 system_ext/lib/libmmrtpdecoder.so|db34a6876b6437bb419e9beedb421f6c1edbef23
 system_ext/lib/libmmrtpencoder.so|5f9d17ea249cf55bc30019f1db2ab317d5c92d32
+vendor/firmware/wlan/qca_cld/wlan_mac.bin
 system_ext/lib/libwfdaac.so|f50992f2e6bd09e03e7d37296fc9e7187e3e4320
 system_ext/lib/libwfdavenhancements.so|3b45ae137a4f85068d4f1a28c7256a8ddb4d7f72
 system_ext/lib/libwfdclient.so|de70d75de4a65714304fddb178b40060a4841746
