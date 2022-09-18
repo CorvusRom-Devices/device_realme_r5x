@@ -140,6 +140,7 @@ void setRMX(unsigned int variant)
         set_ro_product_prop(source, "device", prop[variant].product_device.c_str());
         set_ro_product_prop(source, "model", prop[variant].device_build.c_str());
     }
+    property_override("ro.bootimage.build.fingerprint", prop[variant].build_fingerprint.c_str());
 }
 
 void init_device_model()
