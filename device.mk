@@ -629,10 +629,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     RemovePackages
 
-# Cgroup and task_profiles
+# Cgroup and Task_profiles
 PRODUCT_COPY_FILES += \
-    system/core/libprocessgroup/profiles/cgroups_28.json:$(TARGET_COPY_OUT_VENDOR)/etc/cgroups.json \
-    system/core/libprocessgroup/profiles/task_profiles_28.json:$(TARGET_COPY_OUT_VENDOR)/etc/task_profiles.json
+    $(LOCAL_PATH)/configs/cgroups.json:$(TARGET_COPY_OUT_VENDOR)/etc/cgroups.json \
+    $(LOCAL_PATH)/configs/task_profiles.json:$(TARGET_COPY_OUT_VENDOR)/etc/task_profiles.json
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/realme/r5x/r5x-vendor.mk)
