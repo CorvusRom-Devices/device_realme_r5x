@@ -45,6 +45,7 @@
   <item name="screen.full.display0">259.48</item>  <!-- ~100mA -->
   <item name="bluetooth.active">4.8</item> <!-- Bluetooth data transfer, ~10mA -->
   <item name="bluetooth.on">0.81</item>  <!-- Bluetooth on & connectable, but not connected, ~0.1mA -->
+  <item name="bluetooth.controller.voltage">3300</item> <!-- Bluetooth controller voltage -->
   <item name="wifi.on">0.18</item>  <!-- ~3mA -->
   <item name="wifi.active">160</item>  <!-- WIFI data transfer, ~200mA -->
   <item name="wifi.scan">14.94</item>  <!-- WIFI network scanning, ~100mA -->
