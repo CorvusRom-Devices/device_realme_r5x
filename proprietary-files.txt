@@ -2693,7 +2693,7 @@ vendor/lib64/libcpion.so|3547ee6e05d1506fe1467762aad640a5866d6075
 vendor/lib64/libdrmfs.so|db2c3188565b5adb2023f977cb27a5d5f30454bf
 vendor/lib64/libdrmtime.so|064bbba75c82d0a3426624e5a2792f73572818f6
 vendor/lib64/libops.so|384115d71caf13bff879c66797c786a4f6b8a636
-vendor/lib64/libpvr.so|9a510d5e99c42e119759c37b48a5d244c2f8e51c
+vendor/lib64/libpvr.so|0d293cfcac615cfadd41aeeba36a336869e51edc
 vendor/lib64/libqisl.so|c79719eebc094c2af9561e8df2c158638b111b70
 vendor/lib64/librmp.so|616f942edc7f69876bac486782e366cc34276b3f
 vendor/lib64/librpmb.so|f191e46026c9495207b16ab4d2bad9aa88a1dcd0
@@ -2752,7 +2752,7 @@ vendor/lib64/vendor.oppo.hardware.commondcs@1.0.so
 vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so
 
 # Fingerprint - from moto_troika 9/PSB29.105-27/fd362:user/release-keys
-vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service-rbs
+vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service-rbs|ad879e7ed06f50c804e79fb9312614c4fdef49e5
 
 # Fingerprint firmware
 vendor/firmware/f_1511.b00
@@ -2908,12 +2908,12 @@ vendor/lib/libVkLayer_q3dtools.so|a8cb8b78bed8dc37ffbc2d1ba0ad559224ae4aa1
 vendor/lib/libadreno_app_profiles.so|2d02acd5ef5747889e483ab3af64a13e
 vendor/lib/libadreno_utils.so|e4b26ccb5639c319092ba735e0bef927
 vendor/lib/libc2d30_bltlib.so|931f54979a4e561cc3235fe09db0b97f
+vendor/lib/libdmabufheap.so|003b4d50a44dc60a8125695cf41553c3
 vendor/lib/libgpudataproducer.so|10cbfcf4df4209486232562b0542797536e7ce16
 vendor/lib/libgsl.so|c8e7ccae7ce28724b0fecde441d3957f
 vendor/lib/libllvm-glnext.so|3f0e8a593039db25c7f71315a94db3db
 vendor/lib/libllvm-qcom.so|fbd0c04be081a5c28430e0d1d38e29ea
 vendor/lib/libllvm-qgl.so|3e30959884cf03563bbc08ad6fec0af9
-vendor/lib/libdmabufheap.so|003b4d50a44dc60a8125695cf41553c3
 vendor/lib/notgsl.so|eff93383180c9200ad362443b94b5788
 vendor/lib64/egl/eglSubDriverAndroid.so|211b100070b99a7c081134e4e6e5d33e
 vendor/lib64/egl/libEGL_adreno.so|4b2d8fb80eb48d36133a0fbcbd0c6f7b
@@ -2929,12 +2929,12 @@ vendor/lib64/libVkLayer_q3dtools.so|aee6cbdc8435e9fbd5a2aaebe13e23c9ff74c997
 vendor/lib64/libadreno_app_profiles.so|d3ba9a5380bb4c367246e9cb9da28308
 vendor/lib64/libadreno_utils.so|d36c196f42dfbc99f5bd8d12ff411aa8
 vendor/lib64/libc2d30_bltlib.so|a8c8e4cd70dc574eb8b9c6e2029fae86
+vendor/lib64/libdmabufheap.so|5be0ef6b552da5a2ae852bb48f16c5b9
 vendor/lib64/libgpudataproducer.so|966f7b359f0e0a4b3b0f41ca1a607f1f143128dd
 vendor/lib64/libgsl.so|94daff9928a394f2921a0797262d97ce
 vendor/lib64/libllvm-glnext.so|19344ffe02c01d01935942cac352dd78
 vendor/lib64/libllvm-qcom.so|3a8fddd3ea8366bdca28f5e549031663
 vendor/lib64/libllvm-qgl.so|38cf76ba847df1ab4bd7ddd0b994b9b2
-vendor/lib64/libdmabufheap.so|5be0ef6b552da5a2ae852bb48f16c5b9
 vendor/lib64/notgsl.so|04a1b7651ec941d0b103247f1a4edf64
 
 # Graphics - SDM - from LA.UM.9.11.r1-03900-NICOBAR.0
@@ -3528,7 +3528,7 @@ vendor/etc/init/wfdvndservice.rc|42e28fb8e0bf00620d7b9939b5bd3164ca671033
 vendor/etc/seccomp_policy/wfdvndservice.policy|b46f0c22a1f9b65c6750205e161c0a3f84ac716b
 vendor/etc/seccomp_policy/wifidisplayhalservice.policy|f113f27e0e301a18baf0ade08c23071a27c7dc52
 vendor/etc/wfdconfig.xml|9e13371f7ae509cc0bbb3f2ace93c5ea5d87bf0f
-vendor/firmware/wlan/qca_cld/wlan_mac.bin
+vendor/firmware/wlan/qca_cld/wlan_mac.bin|1f61869bf533036d365b019c7bf60dfb814db025
 vendor/lib/libFileMux_proprietary.so|e59edd4604a7c73147118161cab5b7ac6bb16c82
 vendor/lib/libmiracast.so|1288361d66810432d73139c3b4b15e65f7447813
 vendor/lib/libmmosal.so|31ca68b67eae1a3822b5310fb034f2722506f248
