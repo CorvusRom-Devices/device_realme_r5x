@@ -23,6 +23,9 @@ genfscon proc /devinfo        u:object_r:proc_devinfo:s0
 genfscon proc /qcom_flash         u:object_r:proc_flash:s0
 genfscon proc /qcom_flash1        u:object_r:proc_flash:s0
 
+# ProcFS
+genfscon proc /sys/vm/dirty_writeback_centisecs                       u:object_r:proc_dirty:s0
+
 # Wakeup source stats
 genfscon sysfs /devices/platform/soc/1610000.qcom,msm-eud/wakeup/wakeup                                                                                                                                                        u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/1c40000.qcom,spmi/spmi-0/spmi0-00/1c40000.qcom,spmi:qcom,pm6125@0:qcom,pm6125_rtc/rtc/rtc0/wakeup                                                                                         u:object_r:sysfs_wakeup:s0
