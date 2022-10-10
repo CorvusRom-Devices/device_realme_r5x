@@ -212,6 +212,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     FM2 \
     libqcomfm_jni \
+    vendor.qti.hardware.fm@1.0:64 \
+    vendor.qti.hardware.fm@1.0.vendor:64 \
     qcom.fmradio \
     qcom.fmradio.xml
 
