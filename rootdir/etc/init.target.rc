@@ -130,9 +130,6 @@ on boot
     chown system system /sys/module/battery_saver/parameters/enabled
     chmod 0660 /sys/module/battery_saver/parameters/enabled
 
-#Load WLAN driver
-    insmod /vendor/lib/modules/qca_cld3_wlan.ko
-
     # Disable serial console
     stop console
 
