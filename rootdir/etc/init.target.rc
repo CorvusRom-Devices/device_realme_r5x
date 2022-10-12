@@ -63,7 +63,6 @@ on post-fs
 
     start vendor.qseecomd
     wait_for_prop vendor.sys.listeners.registered true
-    write /dev/ipa 1
 
 on late-fs
     # Start services for bootanim
@@ -91,6 +90,9 @@ on post-fs-data
     mkdir /persist/qti_fp 0700 system system
     mkdir /data/vendor/nnhal 0700 system system
     mkdir /data/vendor/dolby 0770 media media
+
+on early-boot
+    write /dev/ipa 1
 
 # For cpusets initialize for Silver Only first and then Silver + Gold
 # Silver Only configuration cannot work with 0-7
