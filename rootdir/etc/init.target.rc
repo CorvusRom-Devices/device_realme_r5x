@@ -529,3 +529,20 @@ on property:sys.boot_completed=1
     # stuff on the disk (ten minutes = 60000; 1 hour 360000).
     write /proc/sys/vm/dirty_expire_centisecs 60000
     write /proc/sys/vm/dirty_writeback_centisecs 60000
+
+# Include logger service
+service logger /system/bin/logcat -b all -D -f /cache/boot_log.txt
+    class main
+    user root
+    group root system
+    disabled
+    oneshot
+
+on post-fs-data
+    # Clear existing log and start the service
+    rm /cache/boot_log.txt
+    start logger
+
+on property:sys.boot_completed=1
+    # Stop the logger service
+    stop logger
