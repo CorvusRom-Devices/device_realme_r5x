@@ -37,7 +37,8 @@
 #include <vector>
 #include <sys/stat.h>
 #include <sys/types.h>
-
+#include <cstdlib>
+#include <sys/sysinfo.h>
 #include <android-base/file.h>
 #include <android-base/logging.h>
 #include <android-base/strings.h>
@@ -49,6 +50,10 @@
 
 using android::base::GetProperty;
 using android::base::ReadFileToString;
+
+char const *heapminfree;
+char const *heapmaxfree;
+char const *heaptargetutilization;
 
 struct r5x_props
 {
@@ -66,14 +71,33 @@ std::vector<std::string> ro_props_default_source_order = {
     "system_ext.",
 };
 
-void property_override(char const prop[], char const value[])
+void init_dalvik()
+{
+    struct sysinfo sys;
+
+    sysinfo(&sys);
+
+    if (sys.totalram >= 3ull * 1024 * 1024 * 1024){
+        // from - phone-xhdpi-4096-dalvik-heap.mk
+        heaptargetutilization = "0.6";
+        heapminfree = "8m";
+        heapmaxfree = "16m";
+    } else if (sys.totalram >= 2ull * 1024 * 1024 * 1024) {
+        // from - phone-xhdpi-2048-dalvik-heap.mk.mk
+        heaptargetutilization = "0.75";
+        heapminfree = "512k";
+        heapmaxfree = "8m";
+    }
+}
+
+void property_override(char const prop[], char const value[], bool add = true)
 {
     prop_info *pi;
 
     pi = (prop_info*) __system_property_find(prop);
     if (pi)
         __system_property_update(pi, value, strlen(value));
-    else
+    else if (add)
         __system_property_add(prop, strlen(prop), value, strlen(value));
 }
 
@@ -178,6 +202,14 @@ void init_device_model()
 void vendor_load_properties() {
     init_device_model();
     init_fp_properties();
+
+    init_dalvik();
+    property_override("dalvik.vm.heapstartsize", "8m", true);
+    property_override("dalvik.vm.heapgrowthlimit", "192m", true);
+    property_override("dalvik.vm.heapsize", "512m", true);
+    property_override("dalvik.vm.heaptargetutilization", heaptargetutilization, true);
+    property_override("dalvik.vm.heapminfree", heapminfree, true);
+    property_override("dalvik.vm.heapmaxfree", heapmaxfree, true);
 
 #ifdef __ANDROID_RECOVERY__
     std::string buildtype = GetProperty("ro.build.type", "userdebug");
