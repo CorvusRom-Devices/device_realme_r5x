@@ -68,4 +68,14 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
     <!-- Burn in protection -->
     <bool name="config_statusBarBurnInProtection">true</bool>
+
+    <!-- The default tiles to display in QuickSettings -->
+    <string name="quick_settings_tiles_default" translatable="false">
+        wifi,cell,location,bt,airplane,sync,rotation,dark,dnd,ambient_display,hotspot,cast,flashlight,reduce_brightness,mictoggle,cameratoggle,screenshot,screenrecord,onthego,soundsearch,alarm
+    </string>
+
+    <!-- Tiles native to System UI. Order should match "quick_settings_tiles_default" -->
+    <string name="quick_settings_tiles_stock" translatable="false">
+        wifi,cell,location,bt,airplane,sync,rotation,dark,dnd,ambient_display,hotspot,cast,flashlight,reduce_brightness,mictoggle,cameratoggle,screenshot,screenrecord,onthego,soundsearch,alarm,internet,dataswitch,battery,saver,smartpixels,inversion,night,reverse,reading_mode,heads_up,caffeine,aod,wallet,fpsinfo,cpuinfo,sound,mono,livedisplay,usb-tether,vpn,reboot,compass,locale,music,controls,anti_flicker,work
+    </string>
 </resources>
