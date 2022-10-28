@@ -215,7 +215,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.radio.data_ltd_sys_ind=1 \
     persist.vendor.radio.data_con_rprt=1 \
     persist.vendor.radio.rat_on=combine \
-    persist.vendor.radio.sib16_support=1
+    persist.vendor.radio.sib16_support=1 \
+    persist.rcs.supported=1
 
 # Recovery
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
