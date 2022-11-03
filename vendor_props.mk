@@ -203,8 +203,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.dbg.volte_avail_ovr=1 \
     persist.dbg.vt_avail_ovr=0 \
     persist.dbg.wfc_avail_ovr=1 \
+    persist.vendor.radio.process_sups_ind=1 \
     persist.dbg.ims_volte_enable=1 \
-    persist.vendor.radio.data_ltd_sys_ind=1 \
     persist.vendor.radio.data_con_rprt=1 \
     persist.radio.calls.on.ims=1 \
     persist.radio.multisim.config=dsds \
@@ -216,6 +216,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.radio.data_con_rprt=1 \
     persist.vendor.radio.rat_on=combine \
     persist.vendor.radio.sib16_support=1 \
+    ro.telephony.block_binder_thread_on_incoming_calls=false \
     persist.rcs.supported=1
 
 # Recovery
