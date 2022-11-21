@@ -1,0 +1,2 @@
+allow vendor_dspservice default_prop:file { read };
+allow vendor_dspservice default_prop:file { getattr };
