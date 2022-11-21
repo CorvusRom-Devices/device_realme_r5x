@@ -151,9 +151,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     disable_configstore
 
-# Dex
-PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := everything
-
 # Crypto
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.crypto.volume.filenames_mode=aes-256-cts
