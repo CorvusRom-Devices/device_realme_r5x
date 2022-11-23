@@ -10,6 +10,7 @@ ro.com.google.ime.kb_pad_port_b=1
 # LMKD
 ro.config.low_ram=false
 ro.lmk.log_stats=true
+ro.config.per_app_memcg=false
 
 # Graphics
 debug.hwui.renderer=skiagl
