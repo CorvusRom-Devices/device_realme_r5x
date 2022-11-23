@@ -295,3 +295,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 vendor.display.disable_rotator_downscale=1 \
 vendor.display.disable_scaler=0 \
 debug.sdm.support_writeback=0
+
+# Zygote
+PRODUCT_PROPERTY_OVERRIDES += \
+zygote.critical_window.minute=10
