@@ -238,7 +238,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.radio.data_con_rprt=1 \
     persist.vendor.radio.rat_on=combine \
     persist.vendor.radio.sib16_support=1 \
-    ro.telephony.block_binder_thread_on_incoming_calls=false \
     persist.rcs.supported=1
 
 # Recovery
