@@ -156,7 +156,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.gralloc.disable_ahardware_buffer=1 \
     debug.hwui.use_hint_manager=true \
     debug.hwui.target_cpu_time_percent=30 \
-    debug.hwui.use_buffer_age=false \
     vendor.display.enable_force_split=1 \
     dev.pm.dyn_samplingrate=1
 
