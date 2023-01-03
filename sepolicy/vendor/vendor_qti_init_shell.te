@@ -5,6 +5,7 @@ allow vendor_qti_init_shell configfs:dir { add_name };
 allow vendor_qti_init_shell configfs:file { create };
 allow vendor_qti_init_shell vfat:file { getattr open read };
 allow vendor_qti_init_shell vfat:dir { search open read };
+allow vendor_qti_init_shell proc_watermark_scale_factor:file { write open };
 
 # To set powerhal init property
 set_prop(vendor_qti_init_shell, vendor_power_prop)
