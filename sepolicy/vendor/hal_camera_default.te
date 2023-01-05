@@ -25,13 +25,14 @@ allow hal_camera_default init:unix_stream_socket { connectto };
 allow hal_camera_default device:chr_file { ioctl  open  read };
 allow hal_camera_default default_prop:property_service { set };
 allow hal_camera_default default_prop:file { getattr  map  open  read };
+allow hal_camera_default vendor_video_prop:file { getattr map };
 allow hal_camera_default public_adsprpcd_file:file r_file_perms;
 allow hal_camera_default vendor_xdsp_device:chr_file r_file_perms;
 allow hal_camera_default vendor_sysfs_kgsl:file r_file_perms;
 get_prop(hal_camera_default, vendor_camera_prop)
 get_prop(hal_camera_default, oppo_debug_prop)
 get_prop(hal_camera_default, bootanim_system_prop)
-r_dir_file(hal_camera_default, proc_oppoversion);
+r_dir_file(hal_camera_default, proc_oppoversion)
 r_dir_file(hal_camera_default, sysfs_net)
 set_prop(hal_camera_default, vendor_camera_prop)
 set_prop(hal_camera_default, vendor_video_prop)
